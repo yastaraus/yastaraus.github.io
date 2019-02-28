@@ -3,41 +3,54 @@ body {
   padding: 0px;
   width: 100%;
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #313131;
 }
 
+a {
+  text-decoration: none;
+  color: pink;
+}
+
+/* === Grid Styles === */
+.grid-item {
+  padding: 10px;
+  /* outline: 1px dotted black; */
+  word-wrap: break-word;
+  background: white;
+  border: 1px solid black;
+}
 .main-header {
   grid-area: header;
-  /* background-color: green; */
+  border-right: none;
 }
 .main-nav {
   grid-area: nav;
-  /* background-color: blue; */
+  border-left: none;
+  border-right: none;
+}
+.special {
+  grid-area: special;
+  border-left: none;
 }
 .promo {
   grid-area: promo;
 }
 .main-content {
   grid-area: main;
-  /* background-color: red; */
 }
 .aside-1 {
   grid-area: aside;
-  /* background-color: purple; */
+  margin-left: 0.5em;
 }
 .main-footer {
   grid-area: footer;
-  /* background-color: green; */
 }
-
 .another {
   grid-area: another;
 }
-.grid-item {
-  padding: 10px;
-  outline: 1px dotted black;
-  word-wrap: break-word;
-}
-
 .glb-wrapper {
   min-height: 100vh;
   max-width: 1200px;
@@ -47,7 +60,7 @@ body {
   display: grid;
 
   grid-template-areas:
-  "header nav nav"
+  "header nav special"
   "promo promo promo"
   "main main aside"
   "another another another"
@@ -55,10 +68,30 @@ body {
 
   grid-template-columns: minmax(150px, 300px) 2fr 1fr;
   grid-template-rows: 80px 2fr 5fr 1fr 80px;
-  grid-gap: 0.3em;
+  grid-row-gap: 0.5em;
 }
 
+/* === Nav Styles === */
+.main-nav {
 
+}
+.main-nav > ul {
+  padding: 0px;
+  margin: 10px 0px 0px 0px;
+
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main-nav > ul a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+
+}
+
+/* === Media Queries === */
 @media (max-width: 768px) {
   .glb-wrapper {
     grid-template-areas:
@@ -69,7 +102,20 @@ body {
     "footer footer footer";
 
     grid-template-columns: 1fr 1fr minmax(120px, 180px);
-    grid-template-rows: 60px 1fr 5fr 2fr 60px;
+    grid-template-rows: 60px 1fr 5fr 1fr 60px;
+  }
+  .aside-1 {
+    grid-area: aside;
+    margin-left: 0em;
+  }
+  .main-nav {
+    border-right: 1px solid black;
+  }
+  .main-nav > ul {
+    margin: 0px;
+  }
+  .special {
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -84,5 +130,18 @@ body {
 
     grid-template-columns: 1fr 60px;
     grid-template-rows: 60px 1fr 5fr 1fr 1fr 60px;
+  }
+  .aside-1 {
+    grid-area: aside;
+    margin-left: 0em;
+  }
+  .main-nav {
+    border-right: 1px solid black;
+  }
+  .main-nav > ul li {
+    display: none;
+  }
+  .special {
+    display: none;
   }
 }
