@@ -7,33 +7,43 @@
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <title>grid</title>
+    <title>yastaraus - new layout</title>
   </head>
   <body>
     <div class="glb-wrapper">
       <!-- Главный хедер -->
-      <header class="grid-item main-header otl">
+      <header class="grid-item main-header">
         header
       </header>
       <!-- Главная навигация -->
-      <nav class="grid-item main-nav otl">
-        main nav
+      <nav class="grid-item main-nav">
+        <ul>
+          <li class="main-nav__item"><a href="#">Lorem</a></li>
+          <li class="main-nav__item"><a href="#">Ipsum</a></li>
+          <li class="main-nav__item"><a href="#">Dolor</a></li>
+        </ul>
+        <a href="#">
+          <!-- Мне кажется можно придумать что то получше с svg -->
+          <svg class="burger-menu" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="-4 -4 40 40">
+            <path d="M4 10h24a2 2 0 0 0 0-4H4a2 2 0 0 0 0 4zm24 4H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4zm0 8H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4z"/>
+          </svg>
+        </a>
       </nav>
       <!-- Какой то промо блок -->
-      <section class="grid-item promo-block otl">
+      <section class="grid-item promo-block">
         promo
       </section>
       <!-- Основной контент -->
-      <main class="grid-item main-content otl">
+      <main class="grid-item main-content">
         content
       </main>
-      <!-- боковой блок -->
-      <aside class="grid-item aside otl">
+      <!-- Боковой контент -->
+      <aside class="grid-item aside">
         aside
       </aside>
       <!-- Главный футер -->
-      <footer class="grid-item main-footer otl">
-        footer
+      <footer class="grid-item main-footer">
+        <span>@yastaraus</span>
       </footer>
     </div>
   </body>
