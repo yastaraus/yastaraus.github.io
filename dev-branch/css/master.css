@@ -5,37 +5,89 @@ body {
   width: 100%;
 }
 
-.otl {
-  outline: 1px dotted red;
+* {
+  box-sizing: border-box;
 }
 
-.flex-wrapper {
-  display: flex;
-  flex-direction: column;
+.otl {
+  outline: 1px dotted black;
 }
+
+.glb-wrapper {
+  max-width: 1200px;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0px auto;
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column: 1 / -1;
-  outline: 1px dotted red;
+  grid-template-columns: repeat(9, minmax(min-content, 1fr)) 1fr repeat(2, 100px);
+  grid-template-rows: 80px 300px 2fr 100px;
+  grid-template-areas:
+  "h h h h h h h n n n n n"
+  "p p p p p p p p p p a a"
+  "c c c c c c c c c c a a"
+  "f f f f f f f f f f f f";
+
+  /* background-color: lightblue; */
 }
 
-.header {
-  background-color: purple;
+.grid-item {
+  text-align: center;
+  padding: 1em;
 }
-.promo {
-  background-color: yellow;
-}
-.benefits {
-  background-color: red;
-}
-.about {
-  background-color: green;
-}
-.feedback {
-  background-color: lightblue;
-}
-.contacts {
+
+.main-header {
+  grid-area: h;
   background-color: pink;
+}
+
+.main-nav {
+ grid-area: n;
+ background-color: pink;
+}
+
+.promo-block {
+  grid-area: p;
+}
+
+.main-content {
+  grid-area: c;
+}
+
+.aside {
+  grid-area: a;
+}
+
+.main-footer {
+  grid-area: f;
+  background-color: pink;
+}
+
+
+
+@media (max-width: 600px) {
+  .glb-wrapper {
+    grid-template-columns: repeat(10, minmax(min-content, 1fr)) repeat(2, 40px);
+    grid-template-rows: 80px 200px 2fr 1fr 80px;
+    grid-template-areas:
+    "h h h h h h h h h h n n"
+    "p p p p p p p p p p p p"
+    "c c c c c c c c c c c c"
+    "a a a a a a a a a a a a"
+    "f f f f f f f f f f f f";
+  }
+}
+
+@media (max-width: 425px) {
+  .glb-wrapper {
+    grid-template-columns: repeat(10, minmax(min-content, 1fr)) repeat(2, 30px);
+    grid-template-rows: 60px 200px 2fr 1fr 60px;
+    grid-template-areas:
+    "h h h h h h h h h h n n"
+    "p p p p p p p p p p p p"
+    "c c c c c c c c c c c c"
+    "a a a a a a a a a a a a"
+    "f f f f f f f f f f f f";
+  }
 }
