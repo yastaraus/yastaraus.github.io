@@ -16,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--yast-main-color);
+  color: var(--clr--yast-main);
 }
 
 .otl {
@@ -29,21 +29,20 @@ a {
   min-width: 320px;
   min-height: 100vh;
   margin: 0px auto;
-  box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
 
   display: grid;
   grid-template-columns: repeat(9, minmax(min-content, 1fr)) 1fr repeat(2, 100px);
   grid-template-rows: 60px 300px 2fr 80px;
 
   grid-template-areas:
-  "h h h h h h h n n n n n"
-  "p p p p p p p p p p a a"
-  "c c c c c c c c c c a a"
+  "h h h h h n n n n n n n"
+  "p p p p p p p p p a a a"
+  "c c c c c c c c c a a a"
   "f f f f f f f f f f f f";
 }
 
 .grid-item {
-  text-align: center;
   /* padding: 1em; */
 }
 
@@ -60,24 +59,51 @@ a {
 .promo-block {
   grid-area: p;
 
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .main-content {
   grid-area: c;
 
+  padding: 1em;
   background-color: ;
+}
+
+
+/* === Стили постов === */
+.blog-article {
+  box-sizing: content-box;
+  border: 1px solid var(--clr-yast-0);
+  border-radius: 4px;
+
+  height: 200px; /* ??? */
+
+  display: flex;
+  flex-direction: row;
+
+  /* box-shadow: inset 0px 0px 1px 1px var(--clr-yast-0); */
+  margin-bottom: 1em;
+}
+.post-pic {
+  margin: 0px;
+  height: auto; /* ??? */
+  width: 200px; /* ??? */
+}
+.post-text {
+  padding: 1em;
+  width: auto; /* ??? */
 }
 
 .aside {
   grid-area: a;
 
-  background-color: purple;
+  padding: 1em;
+  /* background-color: purple; */
 }
 
 .main-footer {
   grid-area: f;
-  background-color: var(--yast-main-color); /* Переменная основным цветом */
+  background-color: var(--clr--yast-main); /* Переменная основным цветом */
 }
 
 /* === Nav Styles === */
@@ -100,8 +126,8 @@ a {
   padding: 10px 20px;
 }
 .main-nav > ul a:hover {
-  font-weight: bold;
-  color: var(--yast-second-color);
+  /* font-weight: bold; */
+  color: var(--clr-yast-0);
 }
 
 .main-nav > a .burger-menu {
@@ -132,7 +158,7 @@ a {
     width: 60px;
   }
   .main-nav > a > .burger-menu {
-    fill: var(--yast-main-color); /* Заливка бургера цветом */
+    fill: var(--clr--yast-main); /* Заливка бургера цветом */
     display: block;
   }
 }
@@ -165,11 +191,13 @@ https://medium.com/devschacht/%D0%B8%D0%B7%D1%83%D1%87%D0%B8%D1%82%D0%B5-css-%D0
 DOM-элементы являются потомками тега <html>.
 */
 :root {
+  --clr--yast-main: #ff6e6e; /* Крансо-розовый, основной цвет */
+  --clr--yast-second: #6DBDBD; /* Второй цвет, синий */
+  --clr--yast-special: #FFC493; /* Персиковый */
+  --clr-yast-0: #FFBDBD; /*  */
+  --clr--yast-1: #80DE80; /* Зеленый, светлый */
+  --clr--yast-2: #1B9A1B; /* Зеленый, темный */
   /*
-  Цвета: http://paletton.com/#uid=7000u0kicw08gQIdAGrm8sequo6
+  Паллета цветов: http://paletton.com/#uid=7000u0kicw08gQIdAGrm8sequo6
   */
-
-  --yast-main-color: #ff6e6e; /* Основной цвет */
-  --yast-second-color: #6DBDBD; /* Второй цвет... а может быть и нет */
-  --yast-another-color: ;
 }
