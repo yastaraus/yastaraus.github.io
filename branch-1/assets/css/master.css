@@ -34,7 +34,7 @@ a {
   box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
 
   display: grid;
-  grid-template-columns: repeat(9, minmax(min-content, 1fr)) 1fr repeat(2, 100px);
+  grid-template-columns: repeat(9, minmax(min-content, 1fr)) 1fr repeat(2, 1fr);
   grid-template-rows: 60px 300px 2fr 80px;
 
   grid-template-areas:
@@ -76,7 +76,7 @@ a {
 /* === Стили постов === */
 .blog-article {
   box-sizing: border-box;
-
+  overflow: hidden;
   border-radius: 6px;
 
   height: 200px; /* ??? */
@@ -98,21 +98,32 @@ a {
   height: auto; /* ??? */
   width: 200px; /* ??? */
   flex-shrink: 0;
+  overflow: hidden;
 }
+
+.post-pic img {
+  height: auto;
+  width: 200px;
+}
+
 .post-text {
   padding: 1em;
   width: auto; /* ??? */
+  overflow: hidden;
 }
 
 .post-text h3 {
-  margin: 0px;
-  max-height: 60px;
+  margin: 0px 0px 10px 0px;
+  max-height: 63px;
 }
 
 .post-description {
-  line-height: 20px;
-  width: 100%;
-  max-height: 90px;
+  /* line-height: 1.3em; */
+  max-height: 70px;
+}
+
+.post-description p {
+  margin: 0px;
 }
 
 .aside {
@@ -131,7 +142,7 @@ a {
 .main-nav {
 
 }
-.main-nav > ul {
+.main-nav__container > ul {
   padding: 0px;
   margin: 9px 0px;
   /* margin: 8px 0px 0px 0px; */
@@ -141,12 +152,12 @@ a {
   justify-content: flex-start;
   align-items: center;
 }
-.main-nav > ul a {
+.main-nav__container > ul a {
   text-decoration: none;
   display: block;
   padding: 10px 20px;
 }
-.main-nav > ul a:hover {
+.main-nav__container > ul a:hover {
   /* font-weight: bold; */
   color: var(--clr-yast-0);
 }
@@ -181,12 +192,19 @@ a {
   .post-pic {
     width: 180px;
   }
+
+  .post-pic img {
+    height: auto;
+    width: 180px;
+  }
+
   .blog-article {
     height: 180px;
+    font-size: 0.9em;
   }
 
   /* Отображаем бургер вместо меню */
-  .main-nav > ul {
+  .main-nav__container {
     display: none;
   }
   .main-nav > a {
@@ -199,20 +217,37 @@ a {
     fill: var(--clr--yast-main); /* Заливка бургера цветом */
     display: block;
   }
+
+  .post-description {
+    /* line-height: 1.3em; */
+    max-height: 60px;
+  }
+
+
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
   .blog-article {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 
   .post-pic {
-    width: 100px;
+    width: 90px;
   }
+
+  .post-pic img {
+    height: auto;
+    width: 90px;
+  }
+
   .blog-article {
-    height: 100px;
+    height: 90px;
   }
-} */
+
+  .post-description {
+    display: none;
+  }
+}
 
 /* @media (max-width: 425px) {
   .glb-wrapper {

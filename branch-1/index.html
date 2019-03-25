@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./assets/css/master.css">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <script type="text/javascript" src="./assets/js/jquery-3.3.1.js"></script> <!-- Подключаем jQuery-3.3.1 -->
-    <script type="text/javascript" src="./assets/js/scripts.js"></script> <!-- Почему-то не работает :( -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
     <title>yastaraus</title>
   </head>
@@ -19,11 +18,13 @@
       </header>
       <!-- Главная навигация -->
       <nav class="grid-item main-nav">
-        <ul>
-          <li class="main-nav__item"><a href="#">Lorem</a></li>
-          <li class="main-nav__item"><a href="#">Ipsum</a></li>
-          <li class="main-nav__item"><a href="#">Dolor</a></li>
-        </ul>
+        <div class="main-nav__container">
+          <ul>
+            <li class="main-nav__item"><a href="#">Lorem</a></li>
+            <li class="main-nav__item"><a href="#">Ipsum</a></li>
+            <li class="main-nav__item"><a href="#">Dolor</a></li>
+          </ul>
+        </div>
         <a href="#">
           <!-- Мне кажется можно придумать что то получше с svg -->
           <svg class="burger-menu" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="-4 -4 40 40">
@@ -31,46 +32,59 @@
           </svg>
         </a>
       </nav>
+
+
+      <!-- Эксперимент -->
+
+
+
       <!-- Какой то промо блок -->
-      <section class="grid-item promo-block otl">
+      <section class="grid-item promo-block ">
         promo
       </section>
       <!-- Основной контент -->
       <main class="grid-item main-content">
         <article class="blog-article classic-post">
           <figure class="post-pic">
-            <img src="" alt="">
+            <img src="./assets/img/post-pic-1.jpg" alt="">
           </figure>
-          <div class="post-text otl">
-            <header><h3 class="otl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem.</h3></header>
-            <div class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem.</div>
-          </div>
+          <div class="post-text">
+            <header><h3 class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit.</h3></header> <!-- Максимум 12 слов -->
+            <div class="post-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem.</div>
+              </p>
+            </div>
         </article>
         <article class="blog-article classic-post">
-          <figure class="post-pic otl">
+          <figure class="post-pic">
             <img src="" alt="">
           </figure>
           <div class="post-text">
-            <header><h3>Lorem ipsum dolor sit amet</h3></header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem.</p>
-          </div>
+            <header><h3 class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit.</h3></header>
+            <div class="post-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem.</div>
+              </p>
+            </div>
         </article>
         <article class="blog-article classic-post">
-          <figure class="post-pic otl">
+          <figure class="post-pic">
             <img src="" alt="">
           </figure>
           <div class="post-text">
-            <header><h3>Lorem ipsum dolor sit amet</h3></header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem.</p>
-          </div>
+            <header><h3 class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3></header>
+            <div class="post-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod eum impedit, animi ipsam ad accusantium cupiditate nihil fuga voluptatem.</div>
+              </p>
+            </div>
         </article>
+        <script type="text/javascript" src="./assets/js/scripts.js"></script>
       </main>
       <!-- Боковой контент -->
-      <aside class="grid-item aside otl">
+      <aside class="grid-item aside ">
         aside
       </aside>
       <!-- Главный футер -->
-      <footer class="grid-item main-footer otl">
+      <footer class="grid-item main-footer ">
         <span>@yastaraus</span>
       </footer>
     </div>
