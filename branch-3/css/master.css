@@ -22,7 +22,7 @@ body {
   display: grid;
 
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100% 60px 1fr 1fr;
+  grid-template-rows: auto 60px 1fr 1fr;
   grid-template-areas:
   "h h h h h h h h h h h h h"
   "n n n n n n n n n n n n n"
@@ -38,18 +38,21 @@ body {
 }
 
 .header_logo {
-  margin: 2em;
+  margin: 2em 2em 1em 2em;
 
   display: flex;
   flex-flow: row-reverse;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 .header_logo--title {
-  width: 750px;
+
+  flex-basis: content;
+  flex-grow: 1;
 }
 
 .header_logo--img {
+  flex-grow: 1;
 
 }
 
@@ -61,7 +64,7 @@ body {
 }
 
 .header_desc {
-  padding: 2em;
+  padding: 1em 2em 2em 2em;
 
   display: flex;
   flex-flow: row;
@@ -69,7 +72,14 @@ body {
 }
 
 .header_desc--text {
-  flex-basis: 700px;
+  flex-basis: 800px;
+  flex-grow: 1;
+
+  font-size: 1.1em;
+}
+
+.header_desc--else {
+  flex-grow: 2;
 }
 
 .main_nav {
