@@ -81,6 +81,7 @@ body {
 .strip > figure {
   grid-column: 1 / -1;
   margin: 20px 0px;
+
 }
 
 .strip > figure > img {
@@ -90,6 +91,7 @@ body {
 .post > figure {
   grid-column: 1 / -1;
   margin: 0px 0px;
+  background-color: #fff;
 }
 .post > figure > img {
   width: 100%;
