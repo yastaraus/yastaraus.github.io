@@ -27,8 +27,12 @@ body {
   --white-yas-color: #fafafa;
 }
 
+.strip > p,h1,span{
+  grid-column: 2 / -2;
+}
+
 .strip h1 {
-  margin: 60px 0px 50px 0px;
+  margin: 60px 0px 30px 0px;
   font-size: 32px;
   text-align: center;
   font-weight: 400;
@@ -38,6 +42,12 @@ body {
   margin: 10px 0px 10px 0px;
   line-height: 1.4em;
   font-weight: 200;
+}
+
+.strip .date {
+  color: gray;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 .post {
@@ -71,9 +81,7 @@ body {
   margin-bottom: 30px;
 }
 
-.strip > p,h1{
-  grid-column: 2 / -2;
-}
+
 
 .post div.strip:nth-of-type(2){
   margin-top: -15%;
@@ -115,6 +123,7 @@ blockquote {
 }
 
 .strip > blockquote {
+  display: block;
   margin: 20px 0px;
   border-right: 3px solid blue;
 }
