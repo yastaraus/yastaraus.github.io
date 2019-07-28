@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic');
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-width: 320px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 50px 0px;
+  font-size: 26px;
+}
+
+.otl {
+  outline: 1px dotted black;
+}
+
+figure {
+  margin: 0px;
+}
+
+figure > img {
+  width: 100%;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0.2em, 1fr)) repeat(3, minmax(106px, 2fr)) repeat(2, minmax(0.2em, 1fr));
+  /* grid-template-columns: repeat(2, minmax(0.2em, 2fr)) minmax(106px, 160px) minmax(106px, 640px) minmax(106px, 160px) repeat(2, minmax(0.2em, 2fr)); */
+  /* grid-template-columns: auto auto repeat(3, 2fr) auto auto; */
+  /* grid-template-columns: repeat(2, 1fr) repeat(3, auto) repeat(2, 1fr); */
+  /* grid-template-columns: repeat(2, minmax(auto, 1.2fr)) repeat(3, 2fr) repeat(2, minmax(auto, 1.2fr)); */
+  /* grid-template-columns: repeat(2, auto) repeat(3, 320px) repeat(2, auto); */
+}
+
+.post > .hero {
+  grid-column: 1 / -1;
+  height: 600px;
+  background: url(https://www.moviedash.com/wp-content/uploads/2018/12/SpiderVerse-2.jpeg) 100% 100% no-repeat; /* Добавляем фон */
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.post > .strip {
+  grid-column: 3 / -3;
+  background-color: #fff;
+  padding: 2% 4%;
+  margin: 0px 0.5em;
+}
+
+.post div.strip:nth-of-type(2){
+  margin-top: -30%;
+}
+
+.strip p {
+  margin: 30px 0px;
+}
+
+
+.post>.wide {
+  grid-column: 1 / -1;
+}
+
+/* @media (max-width: 1024px) {
+  .post {
+    grid-template-columns: 0.1fr 0.5fr 6fr 6fr 6fr 0.5fr 0.1fr;
+  }
+  .post > .hero {
+    height: 400px;
+  }
+  .post div.strip:nth-of-type(2){
+    margin-top: -20%;
+  }
+} */

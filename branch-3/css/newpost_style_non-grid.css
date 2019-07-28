@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic');
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-width: 320px;
+  color: var(--text-yas-color);
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  background-color: var(--white-yas-color);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.strip h1 {
+  margin: 30px 0px 50px 0px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 400;
+}
+
+figure {
+  margin: 20px 0px;
+}
+
+figure > img {
+  width: 100%;
+}
+
+figure > figcaption {
+  color: gray;
+  font-size: 0.8em;
+  text-align: center;
+
+}
+
+/* .otl {
+  outline: 1px dotted black;
+} */
+
+.post > .hero {
+  height: 600px;
+  background: url(https://www.moviedash.com/wp-content/uploads/2018/12/SpiderVerse-2.jpeg) 100% 100% no-repeat; /* Добавляем фон */
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.strip {
+  max-width: 960px;
+  margin: 0px auto;
+  background-color: white;
+  padding: 3em 6em;
+}
+
+.strip p {
+  margin: 30px 0px;
+  line-height: 1.3em;
+}
+
+.post div.strip:nth-of-type(2){
+  margin-top: -15%;
+  border-top: 2px solid var(--text-yas-color);
+  border-radius: 2px;
+}
+
+.big_quote {
+  max-width: 960px;
+  margin: 0px auto;
+  background-color: var(--add-yas-color);
+  padding: 4em 8em;
+}
+
+.big_quote > p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+
+.big_quote > p::before {
+  content: "«";
+}
+
+.big_quote > p::after {
+  content: "»";
+}
+
+.big_quote > .author {
+  font-weight: 400;
+  text-align: right;
+  font-size: 1em;
+}
+
+.big_quote > .author::before {
+  content: "— ";
+}
+
+
+/* Color palette */
+:root {
+  --main-yas-color: pink;
+  --second-yas-color: red;
+  --add-yas-color: #ffe0de;
+
+  --text-yas-color: #262626;
+  --link-yas-color: ;
+  --white-yas-color: #fafafa;
+}
+
+
+/* Media queries */
+@media (max-width: 960px) {
+  /* .post > .hero {
+    height: 400px;
+  } */
+}
+
+@media (max-width: 768px) {
+  .post > .hero {
+    height: 300px;
+  }
+  .strip {
+    padding: 1em 1em;
+  }
+  .post div.strip:nth-of-type(2){
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 512px)  {
+  .strip h1 {
+    margin: 20px 0px 30px 0px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .strip p {
+    font-size: 16px;
+  }
+}
