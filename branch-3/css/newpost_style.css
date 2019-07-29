@@ -5,7 +5,7 @@ body {
   padding: 0px;
   width: 100%;
   min-width: 320px;
-  font-size: 18px;
+  font-size: 17px;
   font-family: 'Roboto', sans-serif;
   background-color: var(--white-yas-color);
 }
@@ -21,7 +21,6 @@ body {
   --main-yas-color: pink;
   --second-yas-color: red;
   --add-yas-color: #ffe0de;
-
   --text-yas-color: #262626;
   --link-yas-color: ;
   --white-yas-color: #fafafa;
@@ -58,7 +57,7 @@ body {
 .post > .hero {
   grid-column: 1 / -1;
   height: 600px;
-  background: url(https://www.moviedash.com/wp-content/uploads/2018/12/SpiderVerse-2.jpeg) 100% 100% no-repeat; /* Добавляем фон */
+  background: url(../../Death_Proof/death_proof_1.png) 100% 100% no-repeat; /* Добавляем фон */
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -103,17 +102,27 @@ body {
 .post > figure {
   grid-column: 1 / -1;
   margin: 0px 0px;
-  background-color: #fff;
+  background-color: white;
+  /* opacity: 0.2; */
 }
 .post > figure > img {
   width: 100%;
 }
+/* .post > figure figcaption {
+  display: block;
+  margin-top: -42px;
+  padding: 10px;
+  color: var(--white-yas-color);
+} */
+
 /* Общий фигкапча */
 .post figcaption {
-  color: gray;
   font-size: 0.8em;
   text-align: center;
+  color: gray;
 }
+
+
 
 /* -- Цитаты -- */
 blockquote {
