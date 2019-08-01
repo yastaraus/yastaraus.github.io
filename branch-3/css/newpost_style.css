@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap');
 
 body {
   margin: 0px;
@@ -8,6 +9,8 @@ body {
   font-size: 17px;
   font-family: 'Roboto', sans-serif;
   background-color: var(--white-yas-color);
+  background-image: url("../../bg/funky-lines.png");
+  color: var(--another-yas-color);
 }
 
 * {
@@ -18,15 +21,96 @@ body {
 
 /* Color palette */
 :root {
-  --main-yas-color: pink;
-  --second-yas-color: red;
-  --add-yas-color: #ffe0de;
-  --text-yas-color: #262626;
-  --link-yas-color: ;
-  --white-yas-color: #fafafa;
+  --main-yas-color: ;
+  --second-yas-color: ;
+  --yas-color: #FF8080;
+  --accent-yas-color: #FF9292;
+  --accent_light-yas-color: #FFEDED;
+  --another-yas-color: #2d2d2d;
 }
 
-.strip > p,h1,span{
+.strip a {
+  color: var(--yas-color);
+  text-decoration: none;
+}
+
+a.special{
+  display: inline-block;
+  color: var(--yas-color);
+  text-decoration: none;
+  position: relative;
+}
+
+a.special:hover{
+  color: white;
+}
+
+a.special::after{
+  content: "";
+  background: var(--yas-color);
+  opacity: 0.6;
+	/* mix-blend-mode: exclusion; */
+  width: calc(100% + 5px);
+  height: 0;
+  position: absolute;
+  bottom: -2px;
+  left: -1px;
+	transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+a.special:hover::after{
+  color: white;
+	height: calc(100% + 2px)
+}
+
+
+.strip .bullet-list {
+  font-weight: 200;
+  grid-column: 2 / -2;
+  margin: 10px 00px 10px 30px;
+  line-height: 1.8em;
+  list-style: none;
+}
+
+.strip .bullet-list li::before {
+  content: "\2022";
+  /* font-size: 20px; */
+  color: var(--accent-yas-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 0.8em;
+  margin-left: -1em;
+  list-style-position: inside;
+
+}
+
+/* .post-marks {
+  grid-column: 1 / 5;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -250px;
+  list-style: none;
+}
+.marks {
+  display: block;
+  padding: 0.3em 0.5em;
+  margin: 0px 0.1em;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: 'Montserrat Alternates', sans-serif;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.4em;
+}
+
+.post-marks .type {
+  background-color: rgba(255, 38, 197, 0.6);;
+} */
+
+.strip p,h1,span{
   grid-column: 2 / -2;
 }
 
@@ -43,10 +127,25 @@ body {
   font-weight: 200;
 }
 
-.strip .date {
+.strip > p.left {
+  grid-column: 2 / 3;
+  padding: 0.8em;
+  margin: 0.3em;
+  /* background-color: var(--accent_light-yas-color); */
+}
+
+.strip > p.right {
+  grid-column: -2 / 3;
+  padding: 0.8em;
+  margin: 0.3em;
+  /* background-color: var(--accent_light-yas-color); */
+}
+
+.date {
   color: gray;
   font-size: 0.8em;
   text-align: center;
+  position: relative;
 }
 
 .post {
@@ -65,8 +164,8 @@ body {
 .post > .strip {
   grid-column: 5 / -5;
   background-color: #fff;
-  /* padding: 3em 6em; */
   margin: 0px 0.5em;
+
 
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
@@ -74,46 +173,62 @@ body {
 
 .strip > p:first-of-type {
   margin-top: 30px;
+
 }
 
 .strip > p:last-of-type {
   margin-bottom: 30px;
 }
 
-
-
 .post div.strip:nth-of-type(2){
   margin-top: -15%;
+  border-top: 3px solid var(--yas-color);
+  border-radius: 3px;
 }
-
 
 /* -- Картинки -- */
 /* В ширину поста */
 .strip > figure {
   grid-column: 1 / -1;
-  margin: 20px 0px;
+  margin: 10px 0px;
+}
 
+.strip > figure figcaption {
+  padding-top: 6px;
 }
 
 .strip > figure > img {
   width: 100%;
+  display: block;
 }
+
 /* Во всю ширину экрана */
 .post > figure {
   grid-column: 1 / -1;
+  height: auto;
   margin: 0px 0px;
-  background-color: white;
+  /* background-color: white; */
   /* opacity: 0.2; */
+  position: relative;
 }
+
+.post > figure figcaption {
+  display: none;
+}
+
+.post > figure:hover figcaption {
+  margin-top: -27px;
+  padding: 6px;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  display: block;
+}
+
 .post > figure > img {
   width: 100%;
-}
-/* .post > figure figcaption {
   display: block;
-  margin-top: -42px;
-  padding: 10px;
-  color: var(--white-yas-color);
-} */
+}
 
 /* Общий фигкапча */
 .post figcaption {
@@ -122,19 +237,17 @@ body {
   color: gray;
 }
 
-
-
 /* -- Цитаты -- */
 blockquote {
   grid-column: 1 / -1;
-  background-color: var(--add-yas-color);
+  background-color: var(--accent_light-yas-color);
   padding: 4em 8em;
 }
 
 .strip > blockquote {
   display: block;
   margin: 20px 0px;
-  border-right: 3px solid blue;
+  border-right: 3px solid var(--accent-yas-color);
 }
 
 blockquote > p {
@@ -175,11 +288,22 @@ blockquote > .author::before {
   .post div.strip:nth-of-type(2){
     margin-top: 0px;
   }
-  .strip h1 {
-    margin: 40px 0px 30px 0px;
-    font-size: 28px;
+  .strip > h1 {
+    margin: 35px 0px 20px 0px;
+    font-size: 26px;
   }
   blockquote {
     padding: 2em 2em;
+  }
+  .post div.strip:nth-of-type(2){
+    border-radius: 0px;
+  }
+  .strip > p.left,.strip > p.right {
+    grid-column: 2 / 4;
+  }
+  .post > figure figcaption {
+    display: block;
+    padding-top: 6px;
+    background-color: white;
   }
 }
