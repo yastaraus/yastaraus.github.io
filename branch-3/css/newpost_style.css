@@ -27,6 +27,8 @@ body {
   --accent-yas-color: #FF9292;
   --accent_light-yas-color: #FFEDED;
   --another-yas-color: #2d2d2d;
+  --strip-max-width-yas: 960px;
+  --strip-min-width-yas: 320px;
 }
 
 .strip a {
@@ -149,8 +151,10 @@ a.special:hover::after{
 }
 
 .post {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr) repeat(4, minmax(80px, 240px)) repeat(4, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr) repeat(4, minmax(80px, 240px)) repeat(4, 1fr); */
+  display: block;
+
 }
 
 .post > .hero {
@@ -162,10 +166,10 @@ a.special:hover::after{
 }
 
 .post > .strip {
-  grid-column: 5 / -5;
   background-color: #fff;
-  margin: 0px 0.5em;
-
+  margin: 0px auto;
+  min-width: var(--strip-min-width-yas);
+  max-width: var(--strip-max-width-yas);
 
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
@@ -188,49 +192,43 @@ a.special:hover::after{
 
 /* -- Картинки -- */
 /* В ширину поста */
-.strip > figure {
-  grid-column: 1 / -1;
-  margin: 10px 0px;
+figure.narrow {
+  min-width: var(--strip-min-width-yas);
+  max-width: var(--strip-max-width-yas);
+  margin: 0px auto;
 }
-
-.strip > figure figcaption {
-  padding-top: 6px;
-}
-
-.strip > figure > img {
+figure.narrow > img {
   width: 100%;
   display: block;
 }
 
 /* Во всю ширину экрана */
-.post > figure {
-  grid-column: 1 / -1;
+figure.wide {
+  width: 100%;
   height: auto;
   margin: 0px 0px;
-  /* background-color: white; */
-  /* opacity: 0.2; */
   position: relative;
 }
-
-.post > figure figcaption {
+/* figure.wide figcaption > div  {
   display: none;
 }
-
-.post > figure:hover figcaption {
+figure.wide:hover figcaption > div {
   margin-top: -27px;
   padding: 6px;
   background-color: black;
   opacity: 0.5;
   color: white;
   display: block;
-}
-
-.post > figure > img {
+} */
+figure.wide > img {
   width: 100%;
   display: block;
 }
 
-/* Общий фигкапча */
+/* Общие стили для figcapture */
+.post figure figcaption > div {
+  padding-top: 6px;
+}
 .post figcaption {
   font-size: 0.8em;
   text-align: center;

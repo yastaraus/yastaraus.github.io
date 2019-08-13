@@ -2,8 +2,9 @@ body {
   margin: 0px;
   padding: 0px;
   width: 100%;
+  min-width: 320px;
   height: 100%;
-  background-color: var(--clr-yast-white);
+  background-color: white;
   color: var(--clr-yast-black);
 }
 
@@ -15,91 +16,45 @@ body {
   outline: 1px dotted red;
 }
 
-.glb_wrapper {
-  max-width: 100%;
-  min-width: 320px;
-
-  display: grid;
-
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto 60px 1fr 1fr;
-  grid-template-areas:
-  "h h h h h h h h h h h h h"
-  "n n n n n n n n n n n n n"
-  "b b b b b b b b b b b b b"
-  "f f f f f f f f f f f f f";
-}
-
-.main_header {
-  grid-area: h;
-
-  background-color: var(--clr-yast-black);
-  color: var(--clr-yast-white);
-}
-
-.header_logo {
-  margin: 2em 2em 1em 2em;
-
-  display: flex;
-  flex-flow: row-reverse;
-  flex-wrap: wrap-reverse;
-}
-
-.header_logo--title {
-
-  flex-basis: content;
-  flex-grow: 1;
-}
-
-.header_logo--img {
-  flex-grow: 1;
-
-}
-
-.header_logo h1 {
-  text-align: right;
-  font-size: 11em;
-  margin: 0px;
-  word-wrap: break-word;
-}
-
-.header_desc {
-  padding: 1em 2em 2em 2em;
-
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-}
-
-.header_desc--text {
-  flex-basis: 800px;
-  flex-grow: 1;
-
-  font-size: 1.1em;
-}
-
-.header_desc--else {
-  flex-grow: 2;
-}
-
-.main_nav {
-  grid-area: n;
-}
-
-.blog_container {
-  grid-area: b;
-
-  background-color: var(--clr-yast-white);
-  color: var(--clr-yast-black);
-}
-
-.main_footer {
-
-}
-
-
 
 :root {
   --clr-yast-black: #131313; /* Почти черный */
   --clr-yast-white: #f6f6f6; /* Почти белый */
+}
+
+
+ /* Стили меню */
+.main-header {
+   min-width: 320px;
+   height: 60px;
+   background-color: var(--clr-yast-white);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+
+ .main-menu > ul {
+   list-style: none;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ }
+
+  .main-menu > ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+  }
+
+
+/* Стили логотипа */
+.logo-container {
+  padding: 20px 0px 20px 20px;
+}
+
+.logo-container img {
+  height: 20px;
 }
