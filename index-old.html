@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yastaraus</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .dev-section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .yastaraus-link {
+        display: block;
+        padding: 1em;
+        margin: 1em;
+        width: 200px;
+        min-height: 180px;
+        border: 1px solid black;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+        color: #ff6e6e;
+      }
+      .yastaraus-link h2 {
+        margin: 0.8em 0px;
+      }
+      .yastaraus-link p {
+        margin: 0.5em 0px;
+      }
+      @media (max-width: 524px) {
+        .dev-section {
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="dev-section">
+      <a class="yastaraus-link" href="./branch-2/index.html">
+        <h2>old yastaraus</h2>
+        <p>Старый тип сайта, со странной грид раскладкой. Более не дорабатывается.</p>
+      </a>
+      <a class="yastaraus-link" href="./branch-1/index.html">
+        <h2>new yastaraus</h2>
+        <p>Новый сайт, с крутой грид раскладкой и адаптивностью. В разработке.</p>
+      </a>
+    </section>
+  </body>
+</html>

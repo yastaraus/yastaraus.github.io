@@ -7,61 +7,33 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
     <style>
       body {
+        height: 100vh;
         font-family: 'Roboto', sans-serif;
-        font-size: 15px;
-        line-height: 1.5;
+        line-height: 1.6em;
+        display: grid;
+        justify-content: center;
+        align-content: center;
       }
       * {
         margin: 0px;
         padding: 0px;
       }
-      .dev-section {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .yastaraus-link {
-        display: block;
-        padding: 1em;
-        margin: 1em;
-        width: 200px;
-        min-height: 180px;
-        border: 1px solid black;
-        border-radius: 8px;
+      .info {
         text-align: center;
-        text-decoration: none;
-        color: #ff6e6e;
+        margin-top: -5em;
       }
-      .yastaraus-link h2 {
-        margin: 0.8em 0px;
+      .info h2 {
+        margin: 1em;
       }
-      .yastaraus-link p {
-        margin: 0.5em 0px;
-      }
-      @media (max-width: 524px) {
-        .dev-section {
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-        }
+      .info p {
+        margin: 0.2em;
       }
     </style>
   </head>
   <body>
-    <section class="dev-section">
-      <a class="yastaraus-link" href="./branch-2/index.html">
-        <h2>old yastaraus</h2>
-        <p>Старый тип сайта, со странной грид раскладкой. Более не дорабатывается.</p>
-      </a>
-      <a class="yastaraus-link" href="./branch-1/index.html">
-        <h2>new yastaraus</h2>
-        <p>Новый сайт, с крутой грид раскладкой и адаптивностью. В разработке.</p>
-      </a>
+    <section class="info">
+      <h2>Страница еще не создана</h2>
+      <p>Здесь пока ничего нет, <br>но возможно в будущем что то появится.</p>
     </section>
   </body>
 </html>
