@@ -1,0 +1,73 @@
+body {
+  min-width: 320px;
+}
+
+main {
+  min-height: 100%;
+}
+
+main section {
+  padding: 1em 2.5em;
+  overflow: hidden;
+}
+
+:root {
+  --clr-main: SkyBlue;
+  --clr-second: ;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12 , minmax(min-content, 1fr));
+  grid-gap: 15px;
+}
+
+
+/* Hero styles */
+.hero {
+  grid-template-rows: repeat(5 , 1fr);
+
+  min-height: 65vh;
+  background-color: var(--clr-main);
+}
+
+.hero > .text-container {
+  grid-column: 7 / 12;
+  grid-row: 2 / 5;
+
+  text-align: right;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+/* benefits styles */
+.benetits {
+}
+
+.benefits h3 {
+  grid-column: 2 / -2;
+  text-align: center;
+}
+
+.benefits-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: 260px;
+  grid-gap: 15px;
+}
+
+.benefits-list li {
+  display: block;
+  background-color: var(--clr-main);
+  padding: 1em;
+  text-align: center;
+}
