@@ -13,7 +13,7 @@
     <main>
       <section class="hero grid">
         <div class="text-container">
-          <h1>Обучение Check Электромонтажников</h1>
+          <h1>Обучение Электромонтажников</h1>
           <h2>Учебный центр</h2>
           <p>Оставь заявку прямо сейчас!</p>
         </div>
@@ -48,7 +48,29 @@
       <section class="about grid">
 
       </section>
-      <section class="contacts grid"></section>
+      <section class="contacts grid">
+	    <form action="./mail.php" method="post">
+  <!--Тег используется для группировки связанных элементов в форме-->
+  <fieldset>
+  <!--Тег задает заголовок для групповых элементов-->
+  <legend>Оставьте сообщение:</legend>
+  Ваше имя: 
+  <!--Устанавливает однострочное текстовое поле ввода:-->
+  <input type="text" name="name">
+  <!--Используется для полей ввода, которые должны содержать адрес электронной почты.-->
+  E-mail:
+  <input type="text" name="email">
+  Номер телефона:
+  <input type="text" name="phone">
+  Сообщение:
+  <!--Тег разрешает многострочный ввод текста.-->
+    Текстовая область может содержать неограниченное количество символов-->
+  <textarea rows="10" cols="45" name="message"></textarea>
+  <!--Устанавливает кнопку для отправки данных формы в обработчик формы.-->
+  <input type="submit" value="Отправить сообщение">
+  </fieldset>
+  </form>
+	  </section>
     </main>
     <footer class="main-footer">
     </footer>
