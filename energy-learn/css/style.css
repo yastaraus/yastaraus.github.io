@@ -30,6 +30,7 @@ main section {
   min-height: 65vh;
   background-image: url(../images/EB-banner.png);
   background-size: 100%;
+  background-repeat: no-repeat;
   /* background-color: var(--clr-main); */
 }
 
