@@ -1,0 +1,39 @@
+body {
+  min-width: 320px;
+}
+
+main {
+  min-height: 100%;
+}
+
+main section {
+  height: 100vh;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --clr-main: ;
+  --clr-second: ;
+}
+
+.grid {
+  display: grid;
+}
+
+section.s1 {
+  background-color: RoyalBlue;
+}
+section.s2 {
+  background-color: Blue;
+}
+section.s3 {
+  background-color: MediumBlue;
+}
+section.s4 {
+  background-color: DarkBlue;
+}
+section.s5 {
+  background-color: Navy;
+}
