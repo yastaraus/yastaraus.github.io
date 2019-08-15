@@ -28,7 +28,7 @@ main section {
   grid-template-rows: repeat(5 , 1fr);
 
   min-height: 65vh;
-  background-image: url(images/EB-banner.png);
+  background-image: url(../images/EB-banner.png);
   /* background-color: var(--clr-main); */
 }
 
