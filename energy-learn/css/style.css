@@ -16,22 +16,56 @@ main section {
   --clr-second: ;
 }
 
+
+/* Общие стили */
 .grid {
   display: grid;
   grid-template-columns: repeat(12 , minmax(min-content, 1fr));
   grid-gap: 15px;
 }
 
+.grid > * {
+  grid-column: 1 / 13;
+}
+
+.grid > h2 {
+  grid-column: 3 / 11;
+  text-align: center;
+}
+
+
+
+/* Стили верхнего меню */
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.main-nav li{
+
+}
+
+.main-nav li a{
+  text-decoration: none;
+  padding: 16px 16px;
+  color: black;
+}
 
 /* Hero styles */
 .hero {
   grid-template-rows: repeat(5 , 1fr);
 
-  min-height: 65vh;
-  background-image: url(../images/EB-banner.png);
+  min-height: 600px;
+  /* background-image: url(../images/EB-banner.png);
   background-size: 100%;
-  background-repeat: no-repeat;
-  /* background-color: var(--clr-main); */
+  background-repeat: no-repeat; */
+  background-color: var(--clr-main);
 }
 
 .hero > .text-container {
@@ -43,8 +77,25 @@ main section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.text-container button {
+  padding: 16px 16px;
+}
+
+
+/* about styles */
+.about {
 
 }
+
+.about p {
+  grid-column: 3 / 11;
+  text-align: center;
+}
+
+
+
 
 /* benefits styles */
 .benetits {
