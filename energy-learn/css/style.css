@@ -1,5 +1,8 @@
+@import url('/assets/fonts/ubuntu/Ubuntu-Regular.ttf');
+
 body {
   min-width: 320px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 main {
@@ -62,10 +65,14 @@ main section {
   grid-template-rows: repeat(5 , 1fr);
 
   min-height: 600px;
-  /* background-image: url(../images/EB-banner.png);
-  background-size: 100%;
+  /* background: url(../images/big-131563-1.jpg), linear-gradient(to left, transparent, var(--clr-main)); */
+  background: linear-gradient(to left, var(--clr-main) 40%, transparent), url(../images/big-131563-1.jpg);
+  background-size: cover;
+  background-position-x: left;
+  background-position-y: bottom;
+  /* background-size: 100%;
   background-repeat: no-repeat; */
-  background-color: var(--clr-main);
+  /* background-color: var(--clr-main); */
 }
 
 .hero > .text-container {
@@ -77,10 +84,13 @@ main section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: end;
 }
 
 .text-container button {
   padding: 16px 16px;
+  cursor: pointer;
+  width: 250px;
 }
 
 
