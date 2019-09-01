@@ -71,9 +71,9 @@ main > section {
 .hero {
   grid-template-rows: repeat(7 , 1fr);
 
-  min-height: 640px;
+  min-height: 340px;
   /* background: url(../images/big-131563-1.jpg), linear-gradient(to left, transparent, var(--clr-main)); */
-  background: linear-gradient(to left, var(--clr-main) 50%, transparent), url(../images/big-131563-1.jpg);
+  background: linear-gradient(to left, var(--clr-main) 40%, transparent), url(../images/big-131563-1.jpg);
   background-size: cover;
   background-position-x: left;
   background-position-y: bottom;
@@ -84,14 +84,14 @@ main > section {
 
 .hero > .text-container {
   grid-column: 6 / 12;
-  grid-row: 2 / 4;
+  grid-row: 2 / 7;
   text-align: right;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.schedule {
+/* .schedule {
   grid-column: 8 / 12;
   grid-row: 4 / 6;
   font-size: 0.95em;
@@ -136,8 +136,34 @@ main > section {
   padding: 16px 16px;
   cursor: pointer;
   width: 250px;
+} */
+
+.schedule > * {
+  grid-column: 2 / 12;
 }
 
+.schedule-table {
+  padding: 1.5em 2.5em;
+  background-color: var(--clr-main);
+}
+
+.schedule-table table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.schedule-table *{
+  padding: 0.8em;
+}
+
+.schedule-table tr {
+  border-bottom: 1px solid black;
+}
+
+.schedule-table tr th{
+  text-align: left;
+  padding: 1em;
+}
 
 /* about styles */
 .about {
