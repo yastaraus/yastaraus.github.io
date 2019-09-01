@@ -21,6 +21,7 @@
     <!-- <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"> -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
   </head>
   <body>
     <header class="main-header">
@@ -178,33 +179,38 @@
       </section> -->
 
       <section class="contacts-container grid">
-        <h2>Контакты</h2>
+        <h2>Свяжитесь с нами</h2>
         <div class="contacts_text">
+          <h3>Наши контакты</h3>
           <p>
             С нами можно связаться по телефону или e-mail<br>
             Наш телефон: <a href="tel:123456789">+7 (999) 999-99-99</a><br>
-            Наш e-mail: <a href="mailto:test@mail.ru">test@mail.ru</a>
+            Наш e-mail: <a href="mailto:test@mail.ru">test@mail.ru</a><br>
+            Адрес: Московская область, ул. Локомотивная, дом 99, стр. 1
           </p>
         </div>
-        <div class="contacts_map">
+        <div class="contacts_map" style="height:400px;">
           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A16ab968722bdac7187e4dad955c573eb9693fb64f7ca9fdea4aa1e9bc80194d1&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
         <div class="contacts_form">
-          <form action="">
-            <fieldset>
-              <legend>Связаться с нами</legend>
+          <h3>Сообщение</h3>
+          <form action="" metod="">
               <label for="firstname">Имя</label>
               <input type="text" id="firstname" name="name" value="">
               <label for="secondname">Фамилия</label>
               <input type="text" id="secondname" name="name" value="">
               <label for="message">Текст отзыва</label>
               <textarea id="message" name="message" rows="5"></textarea>
-            </fieldset>
+            <div class="buttons">
+              <input type="submit" value="Оценить">
+              <input type="reset" value="Сбросить">
+            </div>
           </form>
         </div>
 	    </section>
     </main>
     <footer class="main-footer">
     </footer>
+    <script src="https://kit.fontawesome.com/d9e35130a4.js"></script>
   </body>
 </html>

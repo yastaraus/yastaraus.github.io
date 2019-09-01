@@ -2,12 +2,17 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px){
-
+  .schedule > * {
+    grid-column: 2 / 12;
+  }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
-
+  main > section {
+    padding: 0.5em 1em;
+    overflow: hidden;
+  }
 }
 
 /* Small Devices, Tablets */
