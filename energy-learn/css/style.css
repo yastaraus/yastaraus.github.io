@@ -1,5 +1,9 @@
 @import url('/assets/fonts/ubuntu/Ubuntu-Regular.ttf');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   min-width: 320px;
   font-family: 'Ubuntu', sans-serif;
@@ -15,8 +19,8 @@ main > section {
 }
 
 :root {
-  --clr-main: SkyBlue;
-  --clr-second: ;
+  --clr-main: #ededed;
+  --clr-second: #f0faff;
 }
 
 
@@ -159,6 +163,9 @@ main > section {
 .schedule-table tr {
   border-bottom: 1px solid black;
 }
+.schedule-table tr:last-of-type {
+  border-bottom: none;
+}
 
 .schedule-table tr th{
   text-align: left;
@@ -167,24 +174,31 @@ main > section {
 
 /* about styles */
 .about {
-
 }
 
-.about > ul {
+.about > h3 {
+  grid-column: 2 / -2;
+  text-align: center;
+}
+
+.about-list {
   list-style: none;
   margin: 0px;
   padding: 0px;
-  grid-column: 1 / -1;
-  justify-content: center;
+
+  grid-column: 2 / -2;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* grid-auto-rows: 260px; */
+  grid-gap: 30px;
 }
 
-
-.about > ul > li {
+.about-list li {
   display: block;
   background-color: var(--clr-main);
   padding: 1em;
   text-align: center;
-  margin: 15px;
 }
 
 .list-item_title {
@@ -192,31 +206,20 @@ main > section {
   font-weight: 700;
 }
 
-/* benefits styles */
-.benetits {
-}
 
-.benefits > h3 {
-  grid-column: 2 / -2;
-  text-align: center;
-}
 
-.benefits-list {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
 
-  grid-column: 1 / -1;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-auto-rows: 260px;
-  grid-gap: 15px;
-}
-
-.benefits-list li {
-  display: block;
+/* Программы обучения */
+.program-container{
   background-color: var(--clr-main);
-  padding: 1em;
-  text-align: center;
+  padding: 3em;
+
+}
+
+/* Первичное обучение блок */
+.program {
+  padding: 2em;
+  background-color: var(--clr-second);
+
 }
