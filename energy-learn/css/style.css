@@ -9,7 +9,7 @@ main {
   min-height: 100%;
 }
 
-main section {
+main > section {
   padding: 1em 2.5em;
   overflow: hidden;
 }
@@ -36,6 +36,13 @@ main section {
   text-align: center;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex + .row {
+  flex-direction: row;
+}
 
 
 /* Стили верхнего меню */
@@ -62,11 +69,11 @@ main section {
 
 /* Hero styles */
 .hero {
-  grid-template-rows: repeat(5 , 1fr);
+  grid-template-rows: repeat(7 , 1fr);
 
-  min-height: 600px;
+  min-height: 640px;
   /* background: url(../images/big-131563-1.jpg), linear-gradient(to left, transparent, var(--clr-main)); */
-  background: linear-gradient(to left, var(--clr-main) 40%, transparent), url(../images/big-131563-1.jpg);
+  background: linear-gradient(to left, var(--clr-main) 50%, transparent), url(../images/big-131563-1.jpg);
   background-size: cover;
   background-position-x: left;
   background-position-y: bottom;
@@ -76,16 +83,56 @@ main section {
 }
 
 .hero > .text-container {
-  grid-column: 7 / 12;
-  grid-row: 2 / 5;
+  grid-column: 6 / 12;
+  grid-row: 2 / 4;
   text-align: right;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: end;
 }
 
-.text-container button {
+.schedule {
+  grid-column: 8 / 12;
+  grid-row: 4 / 6;
+  font-size: 0.95em;
+}
+
+.schedule table {
+  border-collapse: collapse;
+  border: 1px solid grey;
+  float: right;
+  width: 100%;
+  background-color: white;
+
+}
+
+.schedule table th{
+  background-color: gray;
+}
+
+.schedule table tr{
+  border-bottom: 1px solid grey;
+}
+
+.schedule table * {
+  padding: 0.5em;
+}
+
+.schedule table caption {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.hero .cta {
+  grid-column: 7 / 12;
+  grid-row: 6 / 7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cta > button {
   padding: 16px 16px;
   cursor: pointer;
   width: 250px;
@@ -97,16 +144,33 @@ main section {
 
 }
 
-.about p {
-  grid-column: 3 / 11;
+.about > ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  grid-column: 1 / -1;
+  justify-content: center;
+}
+
+
+.about > ul > li {
+  display: block;
+  background-color: var(--clr-main);
+  padding: 1em;
   text-align: center;
+  margin: 15px;
+}
+
+.list-item_title {
+  font-size: 1.25em;
+  font-weight: 700;
 }
 
 /* benefits styles */
 .benetits {
 }
 
-.benefits h3 {
+.benefits > h3 {
   grid-column: 2 / -2;
   text-align: center;
 }
