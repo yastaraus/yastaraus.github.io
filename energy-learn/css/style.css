@@ -248,6 +248,7 @@ ABOUT??
   "h h h"
   "pa l pt"
   "pc . .";
+  grid-template-columns: 1fr 1px 1fr;
 }
 
 .program header {
@@ -259,6 +260,10 @@ ABOUT??
   padding: 0px;
   list-style: none;
 }
+
+/* .program_about, .program_themes {
+  width: 100%;
+} */
 
 .program_about {
   grid-area: pa;
@@ -280,7 +285,7 @@ ABOUT??
 
 .line {
   grid-area: l;
-  width: 1px;
+  /* width: 1px; */
   min-height: 60%;
   background-color: black;
 }
