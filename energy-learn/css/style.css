@@ -81,7 +81,6 @@ li>i {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 .main-nav li{
 
@@ -268,10 +267,6 @@ ABOUT??
 .program_about {
   grid-area: pa;
   padding: 0px 30px;
-}
-
-.program_tags li {
-
 }
 
 .program_themes {

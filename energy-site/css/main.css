@@ -1,0 +1,247 @@
+@import url('/assets/fonts/ubuntu/Ubuntu-Regular.ttf');
+
+body {
+  min-width: 320px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--clr-black);
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-main: #26879E;
+  --clr-second: #f0faff;
+  --clr-black: #222222;
+  --clr-white: #f6f6f6;
+  --clr-1: #E19C32;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+.narrow-block {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid-block {
+  display: grid;
+  grid-template-columns: repeat(12 , minmax(min-content, 1fr));
+}
+
+/* Стили верхнего меню */
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav li a{
+  text-decoration: none;
+  padding: 16px 16px;
+  color: black;
+}
+
+
+/* Hero styles */
+.main-hero {
+  grid-template-rows: repeat(7 , 1fr);
+  min-height: 420px;
+  background: linear-gradient(to left, var(--clr-main) 40%, transparent), url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-position-x: left;
+  background-position-y: bottom;
+}
+
+.main-hero > .text-container {
+  color: var(--clr-second);
+  grid-column: 6 / 12;
+  grid-row: 2 / 7;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.text-container > * {
+  margin-bottom: 0px;
+}
+
+
+
+/* ================================================
+Блок с преимуществами
+================================================ */
+
+.benefits {
+  padding: 5em;
+}
+
+.benefits_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.benefits_list > li {
+  display: block;
+
+  font-size: 1.15em;
+  flex-basis: 380px;
+  text-align: center;
+  background-color: var(--clr-1);
+  padding: 0.2em 2em;
+}
+
+
+
+
+
+
+
+
+/* ================================================
+Блок с программамии обучения
+================================================ */
+.program_item {
+  background: ;
+  border: 1px solid var(--clr-main);
+  margin: 1em 0;
+
+}
+
+.program_title {
+  margin: 1.4em;
+}
+
+.program-header {
+}
+
+.program_tag {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-tag_time {
+
+}
+
+.program_desc {
+  display: flex;
+  flex-direction: row;
+}
+
+.program_about {
+  padding: 0 3em;
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.program_themes {
+  padding: 0 3em;
+  border-left: 1px solid var(--clr-main);
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.program_cta {
+  max-width: 640px;
+  margin: 1.4em auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.program_btn {
+  background-color: #E1AC32;
+  min-width: 200px;
+}
+
+
+
+/* ================================================
+Блок с расписанием
+================================================ */
+.schedule > * {
+  grid-column: 3 / 11;
+}
+
+.schedule-table {
+  /* padding: 1.5em 2.5em; */
+}
+
+.schedule-table table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.schedule-table *{
+  padding: 0.8em;
+}
+
+.schedule-table tr {
+  border-bottom: 1px solid var(--clr-main);
+}
+.schedule-table tr:last-of-type {
+  border-bottom: none;
+}
+
+.schedule-table tr th{
+  text-align: left;
+  padding: 1em;
+}
+
+.schedule p {
+  /* padding: 0px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal-form {
+  width: 600px;
+  max-height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  padding: 2em;
+
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.modal-form label {
+  display: block;
+}
