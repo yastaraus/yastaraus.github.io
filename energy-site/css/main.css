@@ -1,9 +1,9 @@
-@import url('/assets/fonts/ubuntu/Ubuntu-Regular.ttf');
+@import url('/fonts/ubuntu/Ubuntu-Regular.ttf');
 
 body {
   min-width: 320px;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.4;
   color: var(--clr-black);
   position: relative;
@@ -13,10 +13,9 @@ body {
   box-sizing: border-box;
 }
 
-
-
 :root {
   --clr-main: #6B6BB6;
+  --clr-main-1: #303084;
   --clr-black: #222222;
   --clr-white: #f6f6f6;
   --clr-1: #E3A756;
@@ -33,6 +32,15 @@ main > section:not(:first-child) {
   color: inherit;
   padding: 10px 16px;
   text-align: center;
+  cursor: pointer;
+}
+
+.type-link {
+  color: inherit;
+}
+
+.type-link:hover {
+  color: var(--clr-main);
 }
 
 .narrow-block {
@@ -112,11 +120,12 @@ main > section:not(:first-child) {
 .benefits_list > li {
   display: block;
 
-  font-size: 1.15em;
+  font-size: 1.1em;
   flex-basis: 380px;
   text-align: center;
   background-color: var(--clr-1);
   padding: 0.2em 2em;
+  box-shadow: 5px 5px 0px 0px var(--clr-main);
 }
 
 
@@ -129,10 +138,14 @@ main > section:not(:first-child) {
 /* ================================================
 Блок с программамии обучения
 ================================================ */
+
+.programs_desc {
+}
+
 .program_item {
   background: ;
   border: 1px solid var(--clr-main);
-  margin: 1em 0;
+  margin: 3em 0;
 
 }
 
@@ -147,10 +160,6 @@ main > section:not(:first-child) {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.program-tag_time {
-
 }
 
 .program_desc {
@@ -173,19 +182,31 @@ main > section:not(:first-child) {
 
 .program_cta {
   max-width: 640px;
-  margin: 1.4em auto;
+  margin: 2em auto;
   display: flex;
   justify-content: space-around;
 }
 
 .program_btn {
   background-color: var(--clr-1);
+  border: 2px solid var(--clr-1);
   min-width: 200px;
 }
 
 .program_btn:hover {
+  color: var(--clr-main-1);
   box-shadow: 3px 3px 0px 0px var(--clr-main);
+  transition: 0.15s;
+}
 
+.program_btn:active {
+  background: none;
+  border: 2px solid var(--clr-1);
+  box-shadow: 3px 3px 0px 0px var(--clr-main);
+}
+
+.program_btn > i {
+  margin-right: 10px;
 }
 
 
@@ -212,7 +233,7 @@ main > section:not(:first-child) {
 }
 
 .schedule-table tr {
-  border-bottom: 1px solid var(--clr-main);
+  border-bottom: 1px solid var(--clr-main-1);
 }
 .schedule-table tr:last-of-type {
   border-bottom: none;
@@ -237,7 +258,7 @@ main > section:not(:first-child) {
   background-color: var(--clr-1);
   display: flex;
   justify-content: space-around;
-  min-height: 400px;
+  min-height: 600px;
 }
 
 .contacts-text {
@@ -257,13 +278,25 @@ main > section:not(:first-child) {
 .main-footer {
   min-height: 60px;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
+  text-transform: uppercase;
 }
 
 
+/* ================================================
+Стили всех модальных окон
+================================================ */
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .8);
+	display: none;
+}
 
-
-.modal-form {
+.popup {
   width: 600px;
   max-height: 800px;
   position: absolute;
@@ -278,6 +311,37 @@ main > section:not(:first-child) {
   border-radius: 10px;
 }
 
-.modal-form label {
+.close-popup {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+
+.close-popup:before {
+	content: '';
+	background-color: var(--clr-black);
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	left: -4px;
+	transform: rotate(-45deg);
+}
+
+.close-popup:after {
+	content: '';
+  background-color: var(--clr-black);
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	transform: rotate(45deg);
+	left: -4px;
+}
+
+.popup label {
   display: block;
 }
