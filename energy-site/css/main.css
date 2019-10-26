@@ -188,6 +188,7 @@ main > section:not(:first-child) {
 }
 
 .program_btn {
+  font-size: 0.95em;
   background-color: var(--clr-1);
   border: 2px solid var(--clr-1);
   min-width: 200px;
