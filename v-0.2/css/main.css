@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  min-width: 320px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-areas:
+  "mh mh mh mh"
+  "mc mc mc ma"
+  "mf mf mf mf";
+}
+
+.main-header {
+  background: yellow;
+
+  grid-area: mh;
+}
+
+.main-container {
+  grid-area: mc;
+  background: red;
+}
+
+.main-aside {
+  grid-area: ma;
+  background: gray;
+}
+
+.main-footer {
+  grid-area: mf;
+  background: yellow;
+
+}
+
+
+
+
+
+.postcard {
+  background: white;
+  width: 100%;
+  height: 340px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.postcard:nth-child(n+2) {
+  flex-direction: row-reverse;
+}
+
+
+
+.postcard figure {
+  margin: 0px;
+}
+
+.postcard-text {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.postcard-text h2,p {
+  margin: 0px;
+}
+
+.postcard-text h2 {
+  font-size: 2em;
+}
+
+.postcard-text p {
+  font-size: 1.1em;
+  margin: 20px 0px 20px 0px;
+}
