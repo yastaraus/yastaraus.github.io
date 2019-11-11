@@ -5,24 +5,89 @@
   .schedule > * {
     grid-column: 2 / 12;
   }
+
+  section.benefits {
+}
+
+  .benefits_list {
+    flex-direction: column;
+    padding: 0px 2em;
+    margin: 0px auto;
+  }
+
+  .benefits_list > li {
+    flex-basis: auto;
+    text-align: left;
+    width: 100%;
+
+    margin-bottom: .8em;
+  }
+
+  .benefits_list > li > * {
+    margin-left: 7%;
+  }
+
+  .benefit_title, .benetit-text {
+    margin: .8em 0em;
+  }
+
+  .benefit_title:before {
+    font-size: 2.2em;
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .program_desc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .program_themes {
+    padding: 1.4em 3em 1.4em 3em;
+    border-left: none;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
-  main > section {
-    padding: 0.5em 1em;
-    overflow: hidden;
+  .main-hero > .text-container > h1 {
+    font-size: 2.2em;
+    text-transform: uppercase;
+  }
+
+  .main-hero > .text-container > p {
+    font-size: 1.4em;
   }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
+  .main-hero {
+    min-height: 420px;
+    background-position-x: left;
+    background-position-y: bottom;
+  }
+
+  .benefit_title:before {
+    /* font-size: 1.6em;
+    left: 3%;
+    top: 22%; */
+  }
+
+
+
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
-
+  .benefits_list {
+    padding: 0px 0.8em;
+  }
 }
 
 /* Custom, iPhone Retina */
