@@ -6,6 +6,7 @@ body {
   font-size: 15px;
   line-height: 1.4;
   color: var(--clr-black);
+  background: var(--clr-white);
   position: relative;
 }
 
@@ -16,11 +17,22 @@ body {
 }
 
 :root {
-  --clr-main: #6B6BB6;
+  --clr-main: #f39422;
   --clr-main-1: #303084;
+  --clr-cta: #537ec5;
+
+
+
+
+  /* Новые цвета */
   --clr-black: #222222;
   --clr-white: #f6f6f6;
-  --clr-1: #E3A756;
+
+  --clr-basic: #2862AD;
+  --crl-add: #58A1FF;
+  --clr-acc: #FFB341;
+
+
 }
 
 main {
@@ -29,8 +41,8 @@ main {
 }
 
 main > section:not(:first-child) {
-  margin: 1.5em 0em;
-  padding: 1.5em 0em;
+  margin: 2.5em 0em;
+  padding: 2.5em 0em;
 }
 
 
@@ -67,6 +79,14 @@ main > section:not(:first-child) {
   margin-bottom: 1em;
 }
 
+/* Хедер */
+.main-header {
+  background: var(--clr-basic);
+
+}
+
+
+
 /* Стили верхнего меню */
 .main-nav ul {
   margin: 0;
@@ -82,7 +102,7 @@ main > section:not(:first-child) {
 .main-nav li a{
   text-decoration: none;
   padding: 16px 16px;
-  color: var(--clr-black);
+  color: var(--clr-white);
 }
 
 
@@ -90,7 +110,8 @@ main > section:not(:first-child) {
 .main-hero {
   grid-template-rows: repeat(7 , 1fr);
   min-height: 420px;
-  background: linear-gradient(to left, var(--clr-main) 40%, transparent), url(../img/hero-bg.jpg);
+  /* background: linear-gradient(to left, var(--clr-main) 40%, transparent), url(../img/hero-bg.jpg); */
+  background: url(../img/hero-bg.jpg);
   background-size: cover;
   background-position-x: left;
   background-position-y: bottom;
@@ -104,7 +125,8 @@ main > section:not(:first-child) {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+  padding: 2em;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .main-hero > .text-container > h1 {
@@ -144,9 +166,9 @@ main > section:not(:first-child) {
   font-size: 1.1em;
   flex-basis: 380px;
   text-align: center;
-  background-color: var(--clr-1);
+  background-color: var(--crl-add);
   padding: 1em 2em;
-  box-shadow: 5px 5px 0px 0px var(--clr-main);
+  box-shadow: 5px 5px 0px 0px var(--clr-acc);
 }
 
 .benefit_title {
@@ -156,7 +178,7 @@ main > section:not(:first-child) {
 .benefit_title:before {
   content: "\f058";
   font-family: "Font Awesome 5 Free";
-  color: var(--clr-main);;
+  color: var(--clr-acc);;
   font-weight: 400;
   font-size: 2.2em;
   position: absolute;
@@ -225,20 +247,20 @@ main > section:not(:first-child) {
 
 .program_btn {
   font-size: 0.95em;
-  background-color: var(--clr-1);
-  border: 2px solid var(--clr-1);
+  background-color: var(--crl-add);
+  border: 2px solid var(--crl-add);
   min-width: 200px;
 }
 
 .program_btn:hover {
-  color: var(--clr-main-1);
-  box-shadow: 3px 3px 0px 0px var(--clr-main);
+  color: var(--clr-acc);
+  box-shadow: 3px 3px 0px 0px var(--clr-acc);
   transition: 0.15s;
 }
 
 .program_btn:active {
   background: none;
-  border: 2px solid var(--clr-1);
+  border: 2px solid var(--clr-cta);
   box-shadow: 3px 3px 0px 0px var(--clr-main);
 }
 
@@ -257,7 +279,7 @@ main > section:not(:first-child) {
 ================================================ */
 .schedule {
 
-  background-color: var(--clr-1);
+  background-color: var(--clr-cta);
 }
 
 .schedule-table {
@@ -296,7 +318,7 @@ main > section:not(:first-child) {
 ================================================ */
 
 .contacts {
-  background-color: var(--clr-1);
+  background-color: var(--clr-cta);
   display: flex;
   justify-content: space-around;
   min-height: 600px;
