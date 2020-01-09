@@ -41,8 +41,8 @@ main {
 }
 
 main > section:not(:first-child) {
-  margin: 2.5em 0em;
-  padding: 2.5em 0em;
+  margin: 2em 0em;
+  padding: 2em 0em;
 }
 
 
@@ -109,7 +109,7 @@ main > section:not(:first-child) {
 /* Hero styles */
 .main-hero {
   grid-template-rows: repeat(7 , 1fr);
-  min-height: 420px;
+  min-height: 540px;
   /* background: linear-gradient(to left, var(--clr-main) 40%, transparent), url(../img/hero-bg.jpg); */
   background: url(../img/hero-bg.jpg);
   background-size: cover;
@@ -133,7 +133,7 @@ main > section:not(:first-child) {
   font-size: 2.2em;
   text-transform: uppercase;
   color: var(--clr-white);
-  text-shadow: 2px 2px 3px var(--clr-black);
+  text-shadow: 1px 1px 2px var(--clr-black);
 }
 
 .main-hero > .text-container > p {
