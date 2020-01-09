@@ -119,14 +119,13 @@ main > section:not(:first-child) {
 
 .main-hero > .text-container {
   color: var(--clr-second);
-  grid-column: 7 / 12;
+  grid-column: 7 / 13;
   grid-row: 2 / 7;
   text-align: right;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 2em;
-  background: rgba(0, 0, 0, 0.6);
 }
 
 .main-hero > .text-container > h1 {
@@ -134,7 +133,7 @@ main > section:not(:first-child) {
   font-size: 2.2em;
   text-transform: uppercase;
   color: var(--clr-white);
-  text-shadow: 2px 2px 5px var(--clr-black);
+  text-shadow: 2px 2px 3px var(--clr-black);
 }
 
 .main-hero > .text-container > p {
