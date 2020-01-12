@@ -3,11 +3,12 @@
 body {
   min-width: 320px;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.4;
   color: var(--clr-black);
   background: var(--clr-white);
   position: relative;
+  list-style-position: inside;
 }
 
 * {
@@ -17,22 +18,13 @@ body {
 }
 
 :root {
-  --clr-main: #f39422;
-  --clr-main-1: #303084;
-  --clr-cta: #537ec5;
-
-
-
-
   /* Новые цвета */
   --clr-black: #222222;
   --clr-white: #f6f6f6;
-
-  --clr-basic: #2862AD;
-  --crl-add: #58A1FF;
-  --clr-acc: #FFB341;
-
-
+  --clr-gray: #e8e8e8;
+  --clr-basic: #357edd;
+  --crl-add: white;
+  --clr-acc: #e6d000;
 }
 
 main {
@@ -40,12 +32,10 @@ main {
   margin: 0px auto;
 }
 
-main > section:not(:first-child) {
-  margin: 2em 0em;
-  padding: 2em 0em;
+main>section:not(:first-child) {
+  /* margin: 2em 0em; */
+  padding: 3em 0em;
 }
-
-
 
 .btn {
   display: inline-block;
@@ -61,18 +51,18 @@ main > section:not(:first-child) {
 }
 
 .type-link:hover {
-  color: var(--clr-main);
+  color: var(--clr-acc);
 }
 
 .narrow-block {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1em;
+  padding: 2em;
 }
 
 .grid-block {
   display: grid;
-  grid-template-columns: repeat(12 , minmax(min-content, 1fr));
+  grid-template-columns: repeat(12, minmax(min-content, 1fr));
 }
 
 .section-title {
@@ -82,33 +72,45 @@ main > section:not(:first-child) {
 /* Хедер */
 .main-header {
   background: var(--clr-basic);
-
-}
-
-
-
-/* Стили верхнего меню */
-.main-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  min-height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: .8em;
 }
 
-.main-nav li a{
+.main-header a {
   text-decoration: none;
+}
+
+.main-header h1 {
+  margin: 0px;
+  color: var(--clr-white);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.header-contacts {
+  font-size: 1.3em;
+  color: var(--clr-white);
+}
+
+.main-nav ul {
+  list-style: none;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav li a {
   padding: 16px 16px;
   color: var(--clr-white);
 }
 
-
 /* Hero styles */
 .main-hero {
-  grid-template-rows: repeat(7 , 1fr);
+  grid-template-rows: repeat(7, 1fr);
   min-height: 540px;
   /* background: linear-gradient(to left, var(--clr-main) 40%, transparent), url(../img/hero-bg.jpg); */
   background: url(../img/hero-bg.jpg);
@@ -117,7 +119,7 @@ main > section:not(:first-child) {
   background-position-y: bottom;
 }
 
-.main-hero > .text-container {
+.main-hero>.text-container {
   color: var(--clr-second);
   grid-column: 7 / 13;
   grid-row: 2 / 7;
@@ -128,41 +130,39 @@ main > section:not(:first-child) {
   padding: 2em;
 }
 
-.main-hero > .text-container > h1 {
-
+.main-hero>.text-container>h1 {
   font-size: 2.2em;
   text-transform: uppercase;
   color: var(--clr-white);
   text-shadow: 1px 1px 2px var(--clr-black);
 }
 
-.main-hero > .text-container > p {
+.main-hero>.text-container>p {
   font-size: 1.8em;
   color: var(--clr-white);
   text-shadow: 2px 2px 5px var(--clr-black);
-
 }
-
 
 /* ================================================
 Блок с преимуществами
 ================================================ */
+.benefits {
+  background-color: var(--clr-basic);
+}
+
 
 .benefits_list {
   list-style: none;
-
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.benefits_list > li {
+.benefits_list>li {
   position: relative;
-
   display: block;
-
-  font-size: 1.1em;
+  font-size: 1em;
   flex-basis: 380px;
   text-align: center;
   background-color: var(--crl-add);
@@ -177,7 +177,8 @@ main > section:not(:first-child) {
 .benefit_title:before {
   content: "\f058";
   font-family: "Font Awesome 5 Free";
-  color: var(--clr-acc);;
+  color: var(--clr-black);
+  ;
   font-weight: 400;
   font-size: 2.2em;
   position: absolute;
@@ -186,20 +187,16 @@ main > section:not(:first-child) {
   top: 8%;
 }
 
-
-
-
-
 /* ================================================
 Блок с программамии обучения
 ================================================ */
-
+/*
 .programs_desc {
 }
 
 .program_item {
   background: ;
-  border: 1px solid var(--clr-main);
+  border: 1px solid var(--clr-acc);
   margin: 3em 0;
 
 }
@@ -232,7 +229,7 @@ main > section:not(:first-child) {
 
 .program_themes {
   padding: 0 3em;
-  border-left: 1px solid var(--clr-main);
+  border-left: 1px solid var(--clr-acc);
   flex-basis: 50%;
   flex-grow: 1;
 }
@@ -270,52 +267,209 @@ main > section:not(:first-child) {
 .program_themes>h3,.program_about>h3 {
   margin-bottom: 1em;
 }
+*/
+/* ================================================
+Блок с программами (НОВЫЙ)
+================================================ */
+.programs {
+  background-color: var(--clr-basic);
+  color: var(--clr-black);
+  grid-gap: 20px;
+}
 
+.programs-content {
+  grid-column: 2 / 9;
+  padding: 2em;
+  background-color: var(--clr-white);
+  border-radius: 0px;
+}
+
+.program_about > h3, .program_themes > h3 {
+  padding: 15px 0px;
+}
+
+.program_about > ul, .program_about > p, .program_themes > ul, .program_themes > p {
+  /* margin: 10px 0px; */
+}
+
+.program_cta {
+  max-width: 640px;
+  padding: 20px 0px 10px 0px  ;
+  margin: 0em auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.program_btn {
+  font-size: 0.95em;
+  background-color: var(--crl-add);
+  border: 2px solid var(--crl-add);
+  min-width: 190px;
+}
+
+.program_btn:hover {
+  color: var(--clr-acc);
+  box-shadow: 3px 3px 0px 0px var(--clr-acc);
+  transition: 0.15s;
+}
+
+.program_btn:active {
+  background: none;
+  border: 2px solid var(--clr-cta);
+  box-shadow: 3px 3px 0px 0px var(--clr-main);
+}
+
+.program_btn > i {
+  margin-right: 10px;
+}
+
+/* https://codepen.io/raubaca/pen/PZzpVe */
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Accordion styles */
+.tabs {
+  overflow: hidden;
+  /* box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); */
+}
+
+.tab {
+  width: 100%;
+  border-radius: 4px;
+  color: var(--clr-black);
+  overflow: hidden;
+  margin: 10px 0px;
+}
+
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3em;
+  background: var(--clr-gray);
+  cursor: pointer;
+  font-size: 1.1em;
+  /* Icon */
+}
+
+.tab-label:hover {
+  background: var(--clr-gray);
+}
+
+.tab-label::after {
+  content: "\276F";
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  transition: all .5s;
+  transform: rotate(90deg);
+}
+
+.tab-content {
+  max-height: 0;
+  padding: 0 2em;
+  background: var(--clr-white);
+  transition: all .5s;
+}
+
+.tab-content > * {
+  /* margin-bottom: 20px; */
+}
+
+input:checked+.tab-label {
+  background: var(--clr-gray);
+}
+
+input:checked+.tab-label:hover {
+  background: var(--clr-gray);
+}
+
+input:checked+.tab-label::after {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+input:checked~.tab-content {
+  max-height: 100vh;
+  padding: 1em 2em;
+}
+
+.programs-aside {
+  grid-column: 9 / 12;
+}
+
+.programs-aside > .container {
+  padding: 2em;
+  background-color: var(--clr-white);
+  border-radius: 0px;
+  box-shadow: 5px 5px 0px 0px var(--clr-acc);
+}
 
 
 /* ================================================
 Блок с расписанием
 ================================================ */
 .schedule {
-
-  background-color: var(--clr-cta);
+  background-color: var(--clr-white);
+  grid-gap: 20px;
 }
+
+
 
 .schedule-table {
-  /* padding: 1.5em 2.5em; */
-}
-
-.schedule-table table{
+  grid-column: 2 / 9;
+  border: 1px solid #ccc;
   border-collapse: collapse;
+  margin: 0;
+  padding: 0;
   width: 100%;
+  table-layout: fixed;
 }
 
-.schedule-table *{
-  padding: 0.8em;
+.schedule-table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
 }
 
 .schedule-table tr {
-  border-bottom: 1px solid var(--clr-main-1);
-}
-.schedule-table tr:last-of-type {
-  border-bottom: none;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
 }
 
-.schedule-table tr th{
-  text-align: left;
+.schedule-table th,
+.schedule-table td {
   padding: 1em;
+  text-align: center;
 }
 
-.schedule p {
-  /* padding: 0px; */
+.schedule-table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
+
+
+
+.schedule-info {
+
+  grid-column: 9 / 12;
+
+}
+
+.schedule-info > .container {
+  padding: 2em;
+  background-color: var(--clr-gray);
+}
+
 
 
 
 /* ================================================
 Блок с контактами и адресом
 ================================================ */
-
 .contacts {
   background-color: var(--clr-cta);
   display: flex;
@@ -333,77 +487,9 @@ main > section:not(:first-child) {
   padding: 1.5em;
 }
 
-
 /* ================================================
 Футер
 ================================================ */
 .main-footer {
-  min-height: 60px;
-  text-align: center;
-  font-size: 0.9em;
-  text-transform: uppercase;
-}
 
-
-/* ================================================
-Стили всех модальных окон
-================================================ */
-.overlay {
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, .8);
-	display: none;
-}
-
-.popup {
-  width: 600px;
-  max-height: 800px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  background-color: #fff;
-  padding: 2em;
-
-  border: 1px solid black;
-  border-radius: 10px;
-}
-
-.close-popup {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	width: 23px;
-	height: 23px;
-	cursor: pointer;
-}
-
-.close-popup:before {
-	content: '';
-	background-color: var(--clr-black);
-	position: absolute;
-	height: 1px;
-	width: 31px;
-	top: 11px;
-	left: -4px;
-	transform: rotate(-45deg);
-}
-
-.close-popup:after {
-	content: '';
-  background-color: var(--clr-black);
-	position: absolute;
-	height: 1px;
-	width: 31px;
-	top: 11px;
-	transform: rotate(45deg);
-	left: -4px;
-}
-
-.popup label {
-  display: block;
 }
