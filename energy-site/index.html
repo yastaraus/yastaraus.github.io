@@ -59,7 +59,7 @@
     <section class="benefits grid-block">
       <ul class="benefits_list">
         <li>
-          <h3 class="benefit_title">Практический опыт</h3>
+          <h3 class="benefit_title">Практический <br>опыт</h3>
           <p class="benetit-text">В обучении используется практический опыт эксплуатации кабельных линий <nobr>АО «Мособлэнерго»</nobr>
           </p>
         </li>
@@ -222,13 +222,13 @@
           и приспособлениями для монтажа муфт, получают навыки по монтажу наиболее распространенных марок муфт, а также знакомятся с новыми перспективными типами кабеля и работе с ними.</p>
         <div class="tabs">
           <div class="tab">
-            <input type="checkbox" id="program-1">
             <label class="tab-label" for="program-1">
               <div>
                 <h3 class="program-title">Первичное обучение</h3>
                 <p>Получение квалификации и специальности</p>
               </div>
             </label>
+            <input class="tab-input" type="checkbox" id="program-1">
             <div class="tab-content">
 
               <div class="program_about">
@@ -242,7 +242,7 @@
               </div>
 
               <div class="program_themes">
-                <h3>Изучаемые темы</h3>
+                <h4>Изучаемые темы</h4>
                 <ul>
                   <li>Электроматериаловедение</li>
                   <li>Общие требования к прокладке кабельных линий</li>
@@ -266,7 +266,7 @@
             </div>
           </div>
           <div class="tab">
-            <input type="checkbox" id="chck2">
+            <input class="tab-input" type="checkbox" id="chck2">
             <label class="tab-label" for="chck2">Переподготовка специалистов</label>
             <div class="tab-content">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
@@ -279,7 +279,17 @@
       <aside class="programs-aside">
         <div class="container">
           <h3>Остались вопросы? <br>Мы вам перезвоним!</h3>
+          <form class="callback">
 
+            <label for="name">Имя</label>
+            <input type="text" name="Имя" id="name" placeholder="Ваше имя" required>
+
+            <label for="tel">Телефон</label>
+            <input type="tel" name="Телефон" id="tel" placeholder="+7 (999) 000 00 00" required>
+
+            <button class="btn program_btn" type="submit" name="Отправить">Перезвоните</button>
+
+          </form>
         </div>
 
 
@@ -311,11 +321,17 @@
                   <td data-label="Тема занятий">Повышение квалификации</td>
                   <td data-label="Количество часов">11</td>
                 </tr>
+                <tr>
+                  <td data-label="Даты">13.03.2020 - 25.03.2020</td>
+                  <td data-label="Тема занятий">Повышение квалификации</td>
+                  <td data-label="Количество часов">11</td>
+                </tr>
               </tbody>
           </table>
           <div class="schedule-info">
             <div class="container">
-              <p>Если планируется обучаться более 6 человек, то график подбирается индивидуально, также возможно обучение на территории заказчика.</p>
+              <i class="fas fa-info-circle"></i>
+              <p>Если планируется обучать более 6 человек, то график подбирается индивидуально. Также возможно обучение на территории заказчика.</p>
             </div>
 
           </div>
