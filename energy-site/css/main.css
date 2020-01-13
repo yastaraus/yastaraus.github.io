@@ -21,7 +21,7 @@ body {
   /* Новые цвета */
   --clr-black: #222222;
   --clr-white: #f6f6f6;
-  --clr-gray: #e8e8e8;
+  --clr-gray: #f0f0f0;
   --clr-basic: #357edd;
   --crl-add: white;
   --clr-acc: #e6d000;
@@ -370,7 +370,7 @@ input {
 .tab-content {
   max-height: 0;
   padding: 0 2em;
-  background: var(--clr-white);
+  background: var(--clr-gray);
   transition: all .5s;
 }
 
@@ -414,16 +414,18 @@ input:checked~.tab-content {
 .schedule {
   background-color: var(--clr-white);
   grid-gap: 20px;
+
 }
 
 
 
 .schedule-table {
+  display: block;
   grid-column: 2 / 9;
   border: 1px solid #ccc;
   border-collapse: collapse;
   margin: 0;
-  padding: 0;
+  padding: 2em;
   width: 100%;
   table-layout: fixed;
 }
@@ -431,6 +433,8 @@ input:checked~.tab-content {
 .schedule-table caption {
   font-size: 1.5em;
   margin: .5em 0 .75em;
+  text-align: left;
+  font-weight: bold;
 }
 
 .schedule-table tr {
