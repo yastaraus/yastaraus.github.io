@@ -71,12 +71,18 @@ main>section:not(:first-child) {
 
 /* Хедер */
 .main-header {
+  max-width: 1920px;
+  margin: 0px auto;
   background: var(--clr-basic);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding: .8em;
+  position: -webkit-sticky; /* Safari */
+  position: sticky; /* https://medium.com/web-standards/sticky-bc7ff7088693 */
+  top: 0;
+  z-index: 10;
 }
 
 .main-header a {
@@ -92,7 +98,7 @@ main>section:not(:first-child) {
 
 .header-contacts {
   font-size: 1.3em;
-  color: var(--clr-white);
+  color: white;
 }
 
 .main-nav ul {
@@ -148,6 +154,7 @@ main>section:not(:first-child) {
 ================================================ */
 .benefits {
   background-color: var(--clr-basic);
+
 }
 
 
@@ -157,13 +164,15 @@ main>section:not(:first-child) {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  grid-column: 2 / 12;
+
 }
 
 .benefits_list>li {
   position: relative;
   display: block;
   font-size: 1em;
-  flex-basis: 380px;
+  flex-basis: 280px;
   text-align: center;
   background-color: var(--crl-add);
   padding: 1em 2em;
@@ -360,9 +369,10 @@ input {
 
 .tab-label::after {
   content: "\276F";
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.5em;
+  height: 1.35em;
   text-align: center;
+  align-self: center;
   transition: all .5s;
   transform: rotate(90deg);
 }
@@ -398,6 +408,7 @@ input:checked~.tab-content {
 
 .programs-aside {
   grid-column: 9 / 12;
+
 }
 
 .programs-aside > .container {
@@ -405,6 +416,7 @@ input:checked~.tab-content {
   background-color: var(--clr-white);
   border-radius: 0px;
   box-shadow: 5px 5px 0px 0px var(--clr-acc);
+
 }
 
 
@@ -431,12 +443,21 @@ input:checked~.tab-content {
 .schedule-table caption {
   font-size: 1.5em;
   margin: .5em 0 .75em;
+  text-align: left;
+}
+
+.schedule-table thead {
+  background-color: var(--clr-gray);
 }
 
 .schedule-table tr {
-  background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: .35em;
+}
+
+.schedule-table tr:hover {
+  background-color: var(--clr-gray);
+  font-weight: bold;
 }
 
 .schedule-table th,
@@ -456,12 +477,13 @@ input:checked~.tab-content {
 .schedule-info {
 
   grid-column: 9 / 12;
-
+  align-self: flex-end;
 }
 
 .schedule-info > .container {
   padding: 2em;
   background-color: var(--clr-gray);
+
 }
 
 

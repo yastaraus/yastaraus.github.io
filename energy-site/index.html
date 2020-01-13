@@ -33,7 +33,7 @@
     <a href="#"><h1>ЭИПК</h1></a>
     <nav class="main-nav">
       <ul>
-        <li><a href="#">Программы обучения</a></li>
+        <li><a href="#programs" rel="m_PageScroll2id" class="mPageScroll2id">Программы обучения</a></li>
         <li><a href="#">Расписание</a></li>
         <li><a href="#">Документы</a></li>
         <li><a href="#">Контакты</a></li>
@@ -56,7 +56,7 @@
 
     <!-- Блок преимуществ -->
 
-    <section class="benefits">
+    <section class="benefits grid-block">
       <ul class="benefits_list">
         <li>
           <h3 class="benefit_title">Практический опыт</h3>
@@ -214,7 +214,7 @@
 
 
 
-    <section class="programs grid-block">
+    <section class="programs grid-block" id="programs">
 
       <div class="programs-content">
         <h2 class="section-title">Программы обучения</h2>
@@ -222,12 +222,17 @@
           и приспособлениями для монтажа муфт, получают навыки по монтажу наиболее распространенных марок муфт, а также знакомятся с новыми перспективными типами кабеля и работе с ними.</p>
         <div class="tabs">
           <div class="tab">
-            <input type="checkbox" id="chck1">
-            <label class="tab-label" for="chck1"><span><strong>Первичное обучение</strong> - Получение квалификации и специальности</span></label>
+            <input type="checkbox" id="program-1">
+            <label class="tab-label" for="program-1">
+              <div>
+                <h3 class="program-title">Первичное обучение</h3>
+                <p>Получение квалификации и специальности</p>
+              </div>
+            </label>
             <div class="tab-content">
 
               <div class="program_about">
-                <h3>О программе</h3>
+                <h4>О программе</h4>
                 <p>Профессиональное обучение специалистов, которые могут составить конкуренцию опытным мастерам.</p>
                 <ul>
                   <li>Для начинающих</li>
@@ -351,7 +356,7 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="./js/main.js"></script>
+
 </body>
 
 </html>
