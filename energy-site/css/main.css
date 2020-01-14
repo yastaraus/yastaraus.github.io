@@ -1,6 +1,41 @@
 @import url('/fonts/ubuntu/Ubuntu-Regular.ttf');
 
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
 body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
   min-width: 320px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
@@ -11,10 +46,44 @@ body {
   list-style-position: inside;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 :root {
@@ -79,21 +148,24 @@ main>section:not(:first-child) {
   justify-content: space-around;
   align-items: center;
   padding: .8em;
-  position: -webkit-sticky; /* Safari */
-  position: sticky; /* https://medium.com/web-standards/sticky-bc7ff7088693 */
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  /* https://medium.com/web-standards/sticky-bc7ff7088693 */
   top: 0;
   z-index: 10;
-  box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
 .main-header a {
   text-decoration: none;
 }
 
-.main-header h1 {
+.main-header span {
   margin: 0px;
   color: var(--clr-white);
   cursor: pointer;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -155,9 +227,7 @@ main>section:not(:first-child) {
 ================================================ */
 .benefits {
   background-color: var(--clr-gray);
-
 }
-
 
 .benefits_list {
   list-style: none;
@@ -166,7 +236,6 @@ main>section:not(:first-child) {
   flex-direction: row;
   justify-content: space-around;
   grid-column: 2 / 12;
-
 }
 
 .benefits_list>li {
@@ -293,17 +362,17 @@ main>section:not(:first-child) {
   border-radius: 0px;
 }
 
-.program_about > h4, .program_themes > h4 {
+.program_about>h4, .program_themes>h4 {
   padding: 12px 0px;
 }
 
-.program_about > ul, .program_about > p, .program_themes > ul, .program_themes > p {
+.program_about>ul, .program_about>p, .program_themes>ul, .program_themes>p {
   /* margin: 10px 0px; */
 }
 
 .program_cta {
   max-width: 640px;
-  padding: 20px 0px 10px 0px  ;
+  padding: 20px 0px 10px 0px;
   margin: 0em auto;
   display: flex;
   justify-content: space-around;
@@ -319,7 +388,7 @@ main>section:not(:first-child) {
 
 .program_btn:hover {
   color: var(--clr-white);
-  box-shadow: 1px 1px 0px 0px var(--clr-white), 2px 2px 0px 0px var(--clr-acc);
+  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-acc);
   transition: 0.15s;
 }
 
@@ -329,7 +398,7 @@ main>section:not(:first-child) {
   box-shadow: 3px 3px 0px 0px var(--clr-main);
 }
 
-.program_btn > i {
+.program_btn>i {
   margin-right: 10px;
 }
 
@@ -351,7 +420,6 @@ main>section:not(:first-child) {
   color: var(--clr-black);
   overflow: hidden;
   margin: 10px 0px;
-
 }
 
 .tab-label {
@@ -364,7 +432,7 @@ main>section:not(:first-child) {
   /* Icon */
 }
 
-.tab-label > div > p {
+.tab-label>div>p {
   margin-top: 5px;
 }
 
@@ -389,15 +457,13 @@ main>section:not(:first-child) {
   transition: all .5s;
 }
 
-.tab-content > * {
+.tab-content>* {
   /* margin-bottom: 20px; */
 }
 
 input:checked+.tab-label {
   background: var(--clr-gray);
 }
-
-
 
 input:checked+.tab-label:hover {
   background: var(--clr-gray);
@@ -415,10 +481,9 @@ input:checked~.tab-content {
 
 .programs-aside {
   grid-column: 9 / 12;
-
 }
 
-.programs-aside > .container {
+.programs-aside>.container {
   padding: 2em;
   background-color: var(--clr-white);
   border-radius: 0px;
@@ -431,23 +496,23 @@ input:checked~.tab-content {
   padding: 1em 0px;
 }
 
-.callback > input {
+.callback>input {
   margin-bottom: 0.5em;
 }
 
-.callback > label {
+.callback>label {
   font-size: 0.9em;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.callback > label, .callback > input {
+.callback>label, .callback>input {
   padding: 0.5em;
   display: block;
   width: 100%;
 }
 
-.callback > button {
+.callback>button {
   margin-top: 1em;
   text-transform: uppercase;
   font-weight: bold;
@@ -460,10 +525,7 @@ input:checked~.tab-content {
 .schedule {
   background-color: var(--clr-white);
   grid-gap: 20px;
-
 }
-
-
 
 .schedule-table {
   /* display: block; */
@@ -508,15 +570,12 @@ input:checked~.tab-content {
   text-transform: uppercase;
 }
 
-
-
 .schedule-info {
-
   grid-column: 9 / 12;
   align-self: flex-end;
 }
 
-.schedule-info > .container {
+.schedule-info>.container {
   padding: 2em;
   background-color: var(--clr-gray);
   display: flex;
@@ -524,14 +583,11 @@ input:checked~.tab-content {
   border: 1px solid var(--clr-acc);
 }
 
-.schedule-info > .container > i {
+.schedule-info>.container>i {
   color: var(--clr-acc);
   font-size: 2.2em;
   margin-right: 0.8em;
 }
-
-
-
 
 /* ================================================
 Блок с контактами и адресом
@@ -556,6 +612,4 @@ input:checked~.tab-content {
 /* ================================================
 Футер
 ================================================ */
-.main-footer {
-
-}
+.main-footer {}
