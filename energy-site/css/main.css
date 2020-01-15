@@ -39,7 +39,7 @@ body {
   min-width: 320px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.5;
   color: var(--clr-black);
   background: var(--clr-white);
   position: relative;
@@ -72,7 +72,8 @@ article>*+* {
 input,
 button,
 textarea,
-select {
+select,
+option {
   font: inherit;
 }
 
@@ -91,8 +92,8 @@ select {
   --clr-black: #222222;
   --clr-white: #f6f6f6;
   --clr-gray: #f0f0f0;
-  --clr-acc: #357edd;
-  --clr-acc2: #e6d000;
+  --clr-acc: #344fb3;
+  --clr-acc2: #f7d94f;
 }
 
 main {
@@ -105,6 +106,8 @@ main>section:not(:first-child) {
   padding: 3em 0em;
 }
 
+
+/* Кнопки */
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -115,12 +118,57 @@ main>section:not(:first-child) {
   border: none;
 }
 
+.program_btn {
+  font-size: 0.95em;
+  color: var(--clr-white);
+  background-color: var(--clr-acc);
+  /* border: 2px solid var(--clr-acc); */
+  min-width: 190px;
+}
+
+.program_btn:hover {
+  color: var(--clr-white);
+  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-acc);
+  transition: 0.15s;
+}
+
+.program_btn:active {
+}
+
+.program_btn>i {
+  margin-right: 10px;
+}
+
+.acc_btn {
+  font-size: 0.95em;
+  font-weight: bold;
+  color: var(--clr-acc);
+  background-color: var(--clr-acc2);
+  /* border: 2px solid var(--clr-acc); */
+  min-width: 190px;
+}
+
+.acc_btn:hover {
+  color: var(--clr-black);
+  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-acc2);
+  transition: 0.15s;
+}
+
+.acc_btn:active {
+}
+
+
+.cta-title {
+  font-size: 2em;
+}
+
+
 .type-link {
   color: inherit;
 }
 
 .type-link:hover {
-  color: var(--clr-acc2);
+  color: var(--clr-acc);
 }
 
 .narrow-block {
@@ -378,29 +426,7 @@ main>section:not(:first-child) {
   justify-content: space-around;
 }
 
-.program_btn {
-  font-size: 0.95em;
-  color: var(--clr-white);
-  background-color: var(--clr-acc);
-  /* border: 2px solid var(--clr-acc); */
-  min-width: 190px;
-}
 
-.program_btn:hover {
-  color: var(--clr-white);
-  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-acc);
-  transition: 0.15s;
-}
-
-.program_btn:active {
-  background: none;
-  border: 2px solid var(--clr-cta);
-  box-shadow: 3px 3px 0px 0px var(--clr-main);
-}
-
-.program_btn>i {
-  margin-right: 10px;
-}
 
 /* https://codepen.io/raubaca/pen/PZzpVe */
 .tab-input {
@@ -417,6 +443,7 @@ main>section:not(:first-child) {
 .tab {
   width: 100%;
   border-radius: 4px;
+  background: var(--clr-gray);
   color: var(--clr-black);
   overflow: hidden;
   margin: 10px 0px;
@@ -426,11 +453,12 @@ main>section:not(:first-child) {
   display: flex;
   justify-content: space-between;
   padding: 1.3em;
-  background: var(--clr-gray);
+
   cursor: pointer;
   font-size: 1.1em;
   /* Icon */
 }
+
 
 .tab-label>div>p {
   margin-top: 5px;
@@ -590,23 +618,78 @@ input:checked~.tab-content {
 }
 
 /* ================================================
+Блок с заявкой на обучение
+================================================ */
+
+.request {
+  background-color: var(--clr-acc);
+  color: var(--clr-white);
+  text-shadow: 1px 1px 3px var(--clr-black);
+  grid-auto-rows: auto;
+
+  grid-template-areas:
+  ". rt rt rt rt rt rt rt rt rt rt ."
+  ". rf rf rf rf rf rf rf rf rf rf .";
+}
+
+.request-text {
+  grid-area: rt;
+  padding: 1em 0em;
+}
+
+.form-container {
+  grid-area: rf;
+  padding: 1em 0em;
+
+}
+.request-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.request-form > .btn {
+  /* height: fit-content; */
+
+}
+
+.request-form > * {
+  /* margin-right: 30px; */
+}
+
+.request-form-item > label {
+  /* margin-right: 10px; */
+  display: block;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+.request-form-item {
+  margin-right: 2em;
+}
+
+.request-form-item>input {
+  padding: 0.5em;
+}
+
+
+/* ================================================
 Блок с контактами и адресом
 ================================================ */
 .contacts {
   background-color: var(--clr-cta);
-  display: flex;
-  justify-content: space-around;
   min-height: 600px;
+  grid-gap: 20px;
 }
 
 .contacts-text {
-  flex-basis: 30%;
-  padding: 1.5em;
+  grid-column: 2 / 5;
 }
 
 .contacts-map {
-  flex-basis: 60%;
-  padding: 1.5em;
+  grid-column: 5 / 12;
 }
 
 /* ================================================

@@ -24,6 +24,8 @@
   <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/media.css">
+  <!-- <link rel="stylesheet" href="./css/select-css.css"> -->
+  <!-- https://github.com/filamentgroup/select-css -->
 </head>
 
 <body>
@@ -35,16 +37,16 @@
     <nav class="main-nav">
       <ul>
         <li><a href="#programs" rel="m_PageScroll2id" class="mPageScroll2id">Программы обучения</a></li>
-        <li><a href="#">Расписание</a></li>
+        <li><a href="#schedule">Расписание</a></li>
         <li><a href="#">Документы</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
     <a class="header-contacts" href="tel:123456789">+7 (999) 999-99-99</a>
   </header>
   <!-- Конец хедера -->
   <main>
-    <!-- Шапка сайта -->
+    <!-- Шапка -->
     <section class="main-hero grid-block">
       <div class="text-container">
         <h1>Энергетический институт повышения квалификации</h1>
@@ -52,7 +54,7 @@
       </div>
     </section>
     <!-- Конец шапки -->
-    <!-- Блок преимуществ -->
+    <!-- Преимуществ -->
     <section class="benefits grid-block">
       <ul class="benefits_list">
         <li>
@@ -191,6 +193,7 @@
 </article>
 </div>
 -->
+    <!-- Программы обучения -->
     <section class="programs grid-block" id="programs">
       <div class="programs-content">
         <h2 class="section-title">Программы обучения</h2>
@@ -238,10 +241,82 @@
             </div>
           </div>
           <div class="tab">
-            <input class="tab-input" type="checkbox" id="chck2">
-            <label class="tab-label" for="chck2">Переподготовка специалистов</label>
+            <input class="tab-input" type="checkbox" id="program-2">
+            <label class="tab-label" for="program-2">
+              <div>
+                <h3 class="program-title">Переподготовка специалистов</h3>
+                <p>Получение второй рабочей специальности</p>
+              </div>
+            </label>
             <div class="tab-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+              <div class="program_about">
+
+                <h4>О программе</h4>
+                <p>Возможность обновить и стандартизировать свои знания в соответствии с последними требованиями стандартов.</p>
+                <ul>
+                  <li>Для рабочих</li>
+                  <li>С отрывом от производства</li>
+                  <li>36 часов</li>
+                </ul>
+
+              </div>
+              <div class="program_themes">
+                <h4>Изучаемые темы</h4>
+                <ul>
+                  <li>Кабели и изоляции из сшитого полиэтилена</li>
+                  <li>Транспонирование экранов</li>
+                  <li>Поиск повреждения</li>
+                  <li>Инструмент для разделки кабеля</li>
+                  <li>Разделка конца кабеля</li>
+                  <li>Кабельные муфты</li>
+                </ul>
+              </div>
+              <div class="program_cta">
+                <a class="btn program_btn " href="#"><i class="far fa-arrow-alt-circle-right"></i>Подробнее</a>
+                <a class="btn program_btn" href="#"><i class="far fa-file-alt"></i>Скачать договор</a>
+                <a class="btn program_btn" href="#"><i class="far fa-envelope"></i>Оставить заявку</a>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <input class="tab-input" type="checkbox" id="program-3">
+            <label class="tab-label" for="program-3">
+              <div>
+                <h3 class="program-title">Повышение квалификации</h3>
+                <p>Возможность повысить свою квалификацию с максимально удобным графиком обучения</p>
+              </div>
+            </label>
+            <div class="tab-content">
+              <div class="program_about">
+
+                <h4>О программе</h4>
+                <p>Возможность повысить свою квалификацию с максимально удобным графиком обучения.</p>
+                <ul>
+                  <li>Для рабочих</li>
+                  <li>С отрывом от производства</li>
+                  <li>72 часа</li>
+                </ul>
+
+              </div>
+              <div class="program_themes">
+                <h4>Изучаемые темы</h4>
+                <ul>
+                  <li>Кабельные изделия</li>
+                  <li>Кабели бумаго-пропитанной изоляцией</li>
+                  <li>Кабели с пластмассовой изоляцией</li>
+                  <li>Кабели с резиновой изоляцией</li>
+                  <li>Кабельные линии</li>
+                  <li>Прокладка кабелей в кабельных сооружениях и в земле</li>
+                  <li>Кабельная траншея</li>
+                  <li>Соединение и оконцевание кабеля</li>
+                  <li>Кабельные муфты</li>
+                </ul>
+              </div>
+              <div class="program_cta">
+                <a class="btn program_btn " href="#"><i class="far fa-arrow-alt-circle-right"></i>Подробнее</a>
+                <a class="btn program_btn" href="#"><i class="far fa-file-alt"></i>Скачать договор</a>
+                <a class="btn program_btn" href="#"><i class="far fa-envelope"></i>Оставить заявку</a>
+              </div>
             </div>
           </div>
         </div>
@@ -254,12 +329,13 @@
             <input type="text" name="Имя" id="name" placeholder="Ваше имя" required>
             <label for="tel">Телефон</label>
             <input type="tel" name="Телефон" id="tel" placeholder="+7 (999) 000 00 00" required>
-            <button class="btn program_btn" type="submit" name="Отправить">Перезвоните</button>
+            <button class="btn program_btn" type="submit" name="Отправить">Оставить заявку</button>
           </form>
         </div>
       </aside>
     </section>
-    <!-- Блок расписания -->
+    <!-- КОНЕЦ Программы обучения -->
+    <!-- Расписание -->
     <section class="schedule grid-block" id="schedule">
       <table class="schedule-table">
         <caption>Расписание занятий</caption>
@@ -273,18 +349,18 @@
         <tbody>
           <tr>
             <td data-label="Даты">13.03.2020 - 25.03.2020</td>
-            <td data-label="Тема занятий">Первичное обучение</td>
-            <td data-label="Количество часов">131</td>
+            <td data-label="Тема">Первичное обучение</td>
+            <td data-label="Кол-во часов">131</td>
           </tr>
           <tr>
             <td data-label="Даты">13.03.2020 - 25.03.2020</td>
-            <td data-label="Тема занятий">Повышение квалификации</td>
-            <td data-label="Количество часов">11</td>
+            <td data-label="Тема">Повышение квалификации</td>
+            <td data-label="Кол-во часов">11</td>
           </tr>
           <tr>
             <td data-label="Даты">13.03.2020 - 25.03.2020</td>
-            <td data-label="Тема занятий">Повышение квалификации</td>
-            <td data-label="Количество часов">11</td>
+            <td data-label="Тема">Повышение квалификации</td>
+            <td data-label="Кол-во часов">11</td>
           </tr>
         </tbody>
       </table>
@@ -295,8 +371,39 @@
         </div>
       </div>
     </section>
-    <!-- КОНЕЦ Блок расписания -->
-    <section class="contacts">
+    <!-- КОНЕЦ Расписание -->
+    <section class="request grid-block">
+      <div class="request-text">
+        <p class="cta-title">Оставь заявку на обучение прямо сейчас!</p>
+      </div>
+      <div class="form-container">
+        <form class="request-form">
+          <div class="request-form-item">
+            <label for="request-name">Имя</label>
+            <input type="text" name="Имя" id="request-name" placeholder="Ваше имя" required>
+          </div>
+          <div class="request-form-item">
+            <label for="request-surname">Фамилия</label>
+            <input type="text" name="Фамилия" id="request-surname" placeholder="Ваша фамилия" required>
+          </div>
+          <div class="request-form-item">
+            <label for="request-email">E-mail</label>
+            <input type="email" name="Почта" id="request-email" placeholder="Ваш e-mail" required>
+          </div>
+          <!--    <label for="request-program">Программа обучения</label>
+          <select class="select-css" name="Программа обучения" id="request-program">
+            <option value="program">Первичное обучение</option>
+            <option value="program">Переподготовка специалистов</option>
+            <option value="program">Повышение квалификации</option>
+          </select> -->
+
+          <button class="btn acc_btn" type="submit" name="Отправить">Оставить заявку</button>
+
+        </form>
+      </div>
+    </section>
+    <!-- Контакты -->
+    <section class="contacts grid-block" id="contacts">
       <div class="contacts-text">
         <h2 class="section-title">Наши контакты</h2>
         <p>
@@ -308,9 +415,10 @@
       </div>
       <div class="contacts-map">
         <script type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A16ab968722bdac7187e4dad955c573eb9693fb64f7ca9fdea4aa1e9bc80194d1&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A86f35c88343c8b8875e73bf3bbd48ad9476cbbaf792a4a1b28e917d40c6bc674&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </section>
+    <!-- КОНЕЦ Контакты -->
   </main>
   <footer class="main-footer">
   </footer>

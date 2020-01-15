@@ -79,13 +79,11 @@
   }
 
 
+  .programs {
+
+  }
 
 
-}
-
-
-
-@media screen and (max-width: 600px) {
   .schedule-table {
     border: 0;
   }
@@ -114,7 +112,7 @@
   .schedule-table td {
     border-bottom: 1px solid #ddd;
     display: block;
-    font-size: .8em;
+    font-size: 1em;
     text-align: right;
   }
 
@@ -132,6 +130,13 @@
   .schedule-table td:last-child {
     border-bottom: 0;
   }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
 }
 
 
