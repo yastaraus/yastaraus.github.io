@@ -24,6 +24,7 @@
   <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/media.css">
+  <link rel="stylesheet" href="./css/magnific-popup.css">
   <!-- <link rel="stylesheet" href="./css/select-css.css"> -->
   <!-- https://github.com/filamentgroup/select-css -->
 </head>
@@ -77,7 +78,7 @@
     <section class="programs grid-block" id="programs">
       <div class="programs-content">
         <h2 class="section-title">Программы обучения</h2>
-        <p style="margin-bottom: 20px;">Программы обучения составлены таким образом, что больше половины учебных часов уделяется практическим занятиям, на которых слушатели под руководством инструктора, обучаются работе со специальными инструментами
+        <p>Программы обучения составлены таким образом, что больше половины учебных часов уделяется практическим занятиям, на которых слушатели под руководством инструктора, обучаются работе со специальными инструментами
           и приспособлениями для монтажа муфт, получают навыки по монтажу наиболее распространенных марок муфт, а также знакомятся с новыми перспективными типами кабеля и работе с ними.</p>
         <div class="tabs">
           <div class="tab">
@@ -91,12 +92,37 @@
             <div class="tab-content">
               <div class="program_about">
                 <h4>О программе</h4>
-                <p>Профессиональное обучение специалистов, которые могут составить конкуренцию опытным мастерам.</p>
-                <ul>
-                  <li>Для начинающих</li>
-                  <li>Очное обучение</li>
-                  <li>180 часов</li>
-                </ul>
+
+                <table class="brif-table">
+                  <tr>
+                    <td>Код профессии:</td>
+                    <td>19842</td>
+                  </tr>
+                  <tr>
+                    <td>Цель:</td>
+                    <td>Профессиональное обучение специалистов, которые могут составить конкуренцию опытным мастерам.</td>
+                  </tr>
+                  <tr>
+                    <td>Категория слушателей:</td>
+                    <td>Рабочие</td>
+                  </tr>
+                  <tr>
+                    <td>Срок обучения:</td>
+                    <td>356 ч.</td>
+                  </tr>
+                  <tr>
+                    <td>Форма обучения:</td>
+                    <td>Очная</td>
+                  </tr>
+                  <tr>
+                    <td>Режим занятий:</td>
+                    <td>8 час/день</td>
+                  </tr>
+                  <tr>
+                    <td>Вид подготовки:</td>
+                    <td>Профессиональная подготовка</td>
+                  </tr>
+                </table>
               </div>
               <div class="program_themes">
                 <h4>Изучаемые темы</h4>
@@ -112,6 +138,22 @@
                   <li>Методы определения места повреждения в силовых кабелях</li>
                   <li>Испытания кабеля после монтажа и ремонта</li>
                 </ul>
+              </div>
+              <div class="program_docs">
+                <h4>Документы после прохождения</h4>
+                <ul>
+                  <li>Документ</li>
+                  <li>Документ</li>
+                  <li>Документ</li>
+                </ul>
+                <div class="doc-prev">
+                  <a href="./docs/personal_cert_red_full.png">
+                    <img src="./docs/personal_cert_red.png" alt="Удостоверение">
+                  </a>
+                  <a href="./docs/personal_cert_blue_full.png">
+                    <img src="./docs/personal_cert_blue.png" alt="Удостоверение">
+                  </a>
+                </div>
               </div>
               <div class="program_cta">
                 <a class="btn program_btn " href="#"><i class="far fa-arrow-alt-circle-right"></i>Подробнее</a>
@@ -152,7 +194,7 @@
                 </ul>
               </div>
               <div class="program_cta">
-                <a class="btn program_btn " href="#"><i class="far fa-arrow-alt-circle-right"></i>Подробнее</a>
+                <a class="btn program_btn" href="#"><i class="far fa-arrow-alt-circle-right"></i>Подробнее</a>
                 <a class="btn program_btn" href="#"><i class="far fa-file-alt"></i>Скачать договор</a>
                 <a class="btn program_btn" href="#"><i class="far fa-envelope"></i>Оставить заявку</a>
               </div>
@@ -217,7 +259,7 @@
     <!-- КОНЕЦ Программы обучения -->
     <!-- Расписание -->
     <section class="schedule grid-block" id="schedule">
-      <table class="schedule-table">
+      <table class="schedule-table adaptive-table">
         <caption>Расписание занятий</caption>
         <thead>
           <tr>
@@ -282,6 +324,33 @@
         </form>
       </div>
     </section>
+
+    <section class="documentation grid-block">
+      <div class="doc-content">
+        <h2 class="section-title">Наши документы</h2>
+        <div class="doc-prev">
+          <div class="doc-prev">
+            <a href="./docs/IMG_0001.jpg">
+              <img src="./docs/IMG_0001.jpg" alt="Удостоверение">
+            </a>
+            <a href="./docs/IMG_0002.jpg">
+              <img src="./docs/IMG_0002.jpg" alt="Удостоверение">
+            </a>
+            <a href="./docs/personal_cert_red_full.png">
+              <img src="./docs/personal_cert_red.png" alt="Удостоверение">
+            </a>
+            <a href="./docs/personal_cert_blue_full.png">
+              <img src="./docs/personal_cert_blue.png" alt="Удостоверение">
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
     <!-- Контакты -->
     <section class="contacts grid-block" id="contacts">
       <div class="contacts-text">
@@ -304,6 +373,8 @@
   </footer>
   <!-- <script src="https://kit.fontawesome.com/d9e35130a4.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/jquery.magnific-popup.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

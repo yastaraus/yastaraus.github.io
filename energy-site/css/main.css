@@ -187,6 +187,24 @@ main>section:not(:first-child) {
   margin-bottom: 1em;
 }
 
+
+.adaptive-table {
+  border-collapse: collapse;
+  margin: 0;
+  table-layout: fixed;
+}
+
+.adaptive-table tr {
+  padding: .35em;
+}
+
+.adaptive-table th,
+.adaptive-table td {
+  padding: 0.3em;
+}
+
+
+
 /* Хедер */
 .main-header {
   max-width: 1920px;
@@ -315,88 +333,7 @@ main>section:not(:first-child) {
 }
 
 /* ================================================
-Блок с программамии обучения
-================================================ */
-/*
-.programs_desc {
-}
-
-.program_item {
-  background: ;
-  border: 1px solid var(--clr-acc2);
-  margin: 3em 0;
-
-}
-
-.program_title {
-  margin: 1.4em;
-}
-
-.program-header {
-}
-
-.program_tag {
-  margin: 0.5em 0em;
-  padding: 0;
-  list-style: none;
-}
-
-
-
-.program_desc {
-  display: flex;
-  flex-direction: row;
-}
-
-.program_about {
-  padding: 0 3em;
-  flex-basis: 50%;
-  flex-grow: 1;
-}
-
-.program_themes {
-  padding: 0 3em;
-  border-left: 1px solid var(--clr-acc2);
-  flex-basis: 50%;
-  flex-grow: 1;
-}
-
-.program_cta {
-  max-width: 640px;
-  margin: 2em auto;
-  display: flex;
-  justify-content: space-around;
-}
-
-.program_btn {
-  font-size: 0.95em;
-  background-color: var(--crl-add);
-  border: 2px solid var(--crl-add);
-  min-width: 200px;
-}
-
-.program_btn:hover {
-  color: var(--clr-acc2);
-  box-shadow: 3px 3px 0px 0px var(--clr-acc2);
-  transition: 0.15s;
-}
-
-.program_btn:active {
-  background: none;
-  border: 2px solid var(--clr-cta);
-  box-shadow: 3px 3px 0px 0px var(--clr-main);
-}
-
-.program_btn > i {
-  margin-right: 10px;
-}
-
-.program_themes>h3,.program_about>h3 {
-  margin-bottom: 1em;
-}
-*/
-/* ================================================
-Блок с программами (НОВЫЙ)
+Блок с программами
 ================================================ */
 .programs {
   background-color: var(--clr-acc);
@@ -411,12 +348,34 @@ main>section:not(:first-child) {
   border-radius: 0px;
 }
 
-.program_about>h4, .program_themes>h4 {
+.programs-content p {
+  margin: 10px 0px;
+}
+
+.tab-content>h4 {
   padding: 12px 0px;
 }
 
-.program_about>ul, .program_about>p, .program_themes>ul, .program_themes>p {
-  /* margin: 10px 0px; */
+.brif-table {
+  font-size: 0.95em;
+}
+
+.brif-table td {
+  padding: 0.2em;
+}
+
+.brif-table td:nth-child(1) {
+  width: 25%;
+}
+
+
+.doc-prev {
+  display: flex;
+
+}
+
+.doc-prev img {
+  width: 200px;
 }
 
 .program_cta {
@@ -426,8 +385,6 @@ main>section:not(:first-child) {
   display: flex;
   justify-content: space-around;
 }
-
-
 
 /* https://codepen.io/raubaca/pen/PZzpVe */
 .tab-input {
@@ -504,7 +461,7 @@ input:checked+.tab-label::after {
 }
 
 input:checked~.tab-content {
-  max-height: 100vh;
+  max-height: 200vh;
   padding: 1em 2em;
 }
 
@@ -673,6 +630,14 @@ input:checked~.tab-content {
 
 .request-form-item>input {
   padding: 0.5em;
+}
+
+
+/* ================================================
+Блок с документами
+================================================ */
+.doc-content {
+  grid-column: 2 / 12;
 }
 
 
