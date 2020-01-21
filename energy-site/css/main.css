@@ -336,7 +336,11 @@ main>section:not(:first-child) {
 Блок с программами
 ================================================ */
 .programs {
-  background-color: var(--clr-acc);
+  background: rgb(52,79,179);
+background: -moz-linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
+background: linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#344fb3",endColorstr="#00189c",GradientType=1);
   color: var(--clr-black);
   grid-gap: 20px;
 }
@@ -358,11 +362,15 @@ main>section:not(:first-child) {
 
 .brif-table {
   font-size: 0.95em;
+  margin: 1.4em 0em 1.4em 1em;
+  padding: 0em 1.2em;
+  border-left: 2px solid var(--clr-acc);
 }
 
 .brif-table td {
   padding: 0.2em;
 }
+
 
 .brif-table td:nth-child(1) {
   width: 25%;
@@ -580,7 +588,12 @@ input:checked~.tab-content {
 ================================================ */
 
 .request {
-  background-color: var(--clr-acc);
+  /* background-color: var(--clr-acc); */
+  background: rgb(52,79,179);
+background: -moz-linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
+background: linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#344fb3",endColorstr="#00189c",GradientType=1);
   color: var(--clr-white);
   text-shadow: 1px 1px 3px var(--clr-black);
   grid-auto-rows: auto;
