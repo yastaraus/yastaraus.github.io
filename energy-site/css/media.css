@@ -38,17 +38,6 @@
     transform: translateY(-50%);
   }
 
-  .program_desc {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .program_themes {
-    padding: 1.4em 3em 1.4em 3em;
-    border-left: none;
-    flex-basis: 50%;
-    flex-grow: 1;
-  }
 
 }
 
