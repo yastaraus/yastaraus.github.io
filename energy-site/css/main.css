@@ -94,13 +94,32 @@ option {
 }
 
 :root {
-  /* Новые цвета */
+  /* Палитра цветов */
   --clr-black: #222222;
   --clr-white: #f6f6f6;
   --clr-gray: #f0f0f0;
-  --clr-acc: #344fb3;
-  --clr-acc2: #f7d94f;
+
+  --clr-basic: rgba(52,79,179,1);
+  --clr-basic-light:rgba(121,141,214,1);
+  --clr-basic-dark:rgba(14,38,125,1);
+
+  --clr-accent: rgba(255,122,87,1);
+  --clr-accent-light: rgba(255,156,130,1);
+  --clr-accent-dark: rgba(185,38,0,1);
+
+
+  /* Палитра градиентов */
+  --gradient-basic: linear-gradient(135deg, var(--clr-basic-light) 0%, var(--clr-basic) 50%, var(--clr-basic-dark) 100%);
 }
+
+.bg-gradient-135 {
+  background: rgb(52,79,179);
+  background: -moz-linear-gradient(135deg, rgba(121,141,214,1) 0%, rgba(52,79,179,1) 50%, rgba(14,38,125,1) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(121,141,214,1) 0%, rgba(52,79,179,1) 50%, rgba(14,38,125,1) 100%);
+  background: var(--gradient-basic);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#344fb3",endColorstr="#00189c",GradientType=1);
+}
+
 
 main {
   max-width: 1920px;
@@ -127,14 +146,13 @@ main>section:not(:first-child) {
 .program_btn {
   font-size: 0.95em;
   color: var(--clr-white);
-  background-color: var(--clr-acc);
-  /* border: 2px solid var(--clr-acc); */
+  background-color: var(--clr-basic);
   min-width: 190px;
 }
 
 .program_btn:hover {
   color: var(--clr-white);
-  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-acc);
+  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-basic);
   transition: 0.15s;
 }
 
@@ -148,15 +166,15 @@ main>section:not(:first-child) {
 .acc_btn {
   font-size: 0.95em;
   font-weight: bold;
-  color: var(--clr-acc);
-  background-color: var(--clr-acc2);
-  /* border: 2px solid var(--clr-acc); */
+  color: var(--clr-basic);
+  background-color: var(--clr-accent);
+  /* border: 2px solid var(--clr-basic); */
   min-width: 190px;
 }
 
 .acc_btn:hover {
   color: var(--clr-black);
-  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-acc2);
+  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-accent);
   transition: 0.15s;
 }
 
@@ -174,7 +192,7 @@ main>section:not(:first-child) {
 }
 
 .type-link:hover {
-  color: var(--clr-acc);
+  color: var(--clr-basic);
 }
 
 .narrow-block {
@@ -218,7 +236,7 @@ main>section:not(:first-child) {
 .main-header {
   max-width: 1920px;
   margin: 0px auto;
-  background: var(--clr-acc);
+  background: var(--clr-basic);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -275,7 +293,6 @@ main>section:not(:first-child) {
 }
 
 .main-hero>.text-container {
-  color: var(--clr-second);
   grid-column: 7 / 13;
   grid-row: 2 / 7;
   text-align: right;
@@ -334,7 +351,7 @@ main>section:not(:first-child) {
   text-align: center;
   background-color: var(--clr-white);
   padding: 1em 2em;
-  box-shadow: 5px 5px 0px 0px var(--clr-acc);
+  box-shadow: 5px 5px 0px 0px var(--clr-basic);
 }
 
 .benefit_title {
@@ -344,7 +361,7 @@ main>section:not(:first-child) {
 .benefit_title:before {
   content: "\f058";
   font-family: "Font Awesome 5 Free";
-  color: var(--clr-acc);
+  color: var(--clr-basic);
   font-weight: 400;
   font-size: 2.2em;
   position: absolute;
@@ -357,11 +374,7 @@ main>section:not(:first-child) {
 Блок с программами
 ================================================ */
 .programs {
-  background: rgb(52,79,179);
-background: -moz-linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
-background: -webkit-linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
-background: linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#344fb3",endColorstr="#00189c",GradientType=1);
+
   color: var(--clr-black);
   grid-gap: 20px;
 }
@@ -386,7 +399,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#344fb3",endCo
   font-size: 0.95em;
   margin: 1.4em 0em 1.4em 1em;
   padding: 0em 1.2em;
-  border-left: 2px solid var(--clr-acc);
+  border-left: 2px solid var(--clr-basic);
 }
 
 .brif-table td {
@@ -439,7 +452,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#344fb3",endCo
 }
 
 .tab:first-of-type {
-  border: 2px solid var(--clr-acc2);
+  border: 2px solid var(--clr-accent);
 }
 
 .tab-label {
@@ -467,7 +480,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#344fb3",endCo
   color: var(--clr-white);
   padding: 0.2em 0.6em;
   border-radius: 5px;
-  background-color: var(--clr-acc);
+  background-color: var(--clr-basic);
 }
 
 .tab-label:hover {
@@ -530,7 +543,7 @@ input:checked~.tab-content {
   padding: 2em;
   background-color: var(--clr-white);
   border-radius: 0px;
-  box-shadow: 5px 5px 0px 0px var(--clr-acc2);
+  box-shadow: 5px 5px 0px 0px var(--clr-accent);
 }
 
 .callback {
@@ -622,11 +635,11 @@ input:checked~.tab-content {
   background-color: var(--clr-gray);
   display: flex;
   align-items: center;
-  border: 1px solid var(--clr-acc);
+  border: 1px solid var(--clr-basic);
 }
 
 .info-block>i {
-  color: var(--clr-acc);
+  color: var(--clr-basic);
   font-size: 2.2em;
 }
 
@@ -644,12 +657,6 @@ input:checked~.tab-content {
 ================================================ */
 
 .request {
-  /* background-color: var(--clr-acc); */
-  background: rgb(52,79,179);
-background: -moz-linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
-background: -webkit-linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
-background: linear-gradient(90deg, rgba(52,79,179,1) 0%, rgba(52,79,179,1) 50%, rgba(0,24,156,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#344fb3",endColorstr="#00189c",GradientType=1);
   color: var(--clr-white);
   text-shadow: 1px 1px 3px var(--clr-black);
   grid-auto-rows: auto;
