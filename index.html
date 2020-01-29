@@ -24,45 +24,73 @@
     <meta property="twitter:image" content="./meta-img.jpg ">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="./js/jquery.fittext.js"></script>
+    <script>
+      jQuery("#responsive_headline").fitText();
+    </script> -->
     <style>
       body {
-        height: 100vh;
+        min-height: 100vh;
+        scroll-behavior: smooth;
+        text-rendering: optimizeSpeed;
+        min-width: 320px;
         font-family: 'Roboto', sans-serif;
-        line-height: 1.6em;
+        background: #e1dc5b;
+
+      }
+      *,
+      *::before,
+      *::after {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      main {
+        width: 100%;
         display: grid;
-        justify-content: center;
-        align-content: center;
-        color: var(--clr-yast-black);
-        background-color: #f0f0f0;
-      }
-      .info {
-        text-align: center;
-        background-color: var(--clr-yast-white);
-        border: 1px solid #dddddd;
-        border-radius: 6px;
-        padding: 3em;
-      }
-      .info > * {
-        /* text-shadow: -1px -1px #000, 0 1px 0 #444; */
       }
 
-      .info h2 {
-        margin: 1em;
-      }
-      .info p {
-        margin: 0.2em;
+      .ll {
+        text-shadow: 8px 8px 1px red, 16px 16px 1px blue;
       }
 
-      :root {
-        --clr-yast-black: #2d2d2d; /* Почти черный */
-        --clr-yast-white: #fff; /* Белый */
+      p {
+        line-height: 1;
+        text-transform: uppercase;
+        word-wrap: break-word;
+        color: #f4f4f4;
       }
+
+      a {
+        text-decoration: none;
+        color: #f4f4f4;
+        transition: 0.7s;
+
+      }
+      a:hover {
+        text-shadow: 4px 4px 1px red, 8px 8px 1px blue;
+      }
+
+
+
+
+       @media only screen and (max-width : 992px) {
+        main > p:nth-last-of-type(1) {
+
+        }
+        main > p:nth-last-of-type(2) {
+
+        }
+       }
+
     </style>
   </head>
   <body>
-    <section class="info">
-      <h2>Страница еще не создана</h2>
-      <p>Здесь пока ничего нет, <br>но возможно в будущем что то появится.</p>
-    </section>
+     <main>
+       <p style="font-size: 28vw; font-weight: 700; text-align: right;" class="ll">Упс...</p>
+       <p style="font-size: 6.5vw; font-weight: 300;">Кажется здесь ничего <span>нет</span>, но мне можно написать — <a href="https://t.me/yastaraus">yastaraus</a></p>
+     </main>
   </body>
 </html>
