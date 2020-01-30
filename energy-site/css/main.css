@@ -668,14 +668,18 @@ input:checked~.tab-content {
 
 .request-text {
   grid-area: rt;
-  padding: 1em 0em;
+  padding: 1.5em 0em;
+}
+
+.cta-title {
+  margin: 0px;
 }
 
 .form-container {
   grid-area: rf;
-  padding: 1em 0em;
-
+  padding: 1.5em 0em;
 }
+
 .request-form {
   display: flex;
   justify-content: flex-start;
@@ -683,8 +687,7 @@ input:checked~.tab-content {
 }
 
 .request-form > .btn {
-  /* height: fit-content; */
-
+  text-transform: uppercase;
 }
 
 .request-form > * {
