@@ -137,6 +137,7 @@ main>section:not(:first-child) {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+  font-size: 0.95em;
   padding: 10px 16px;
   text-align: center;
   cursor: pointer;
@@ -144,7 +145,6 @@ main>section:not(:first-child) {
 }
 
 .program_btn {
-  font-size: 0.95em;
   color: var(--clr-white);
   background-color: var(--clr-basic);
   min-width: 190px;
@@ -164,21 +164,26 @@ main>section:not(:first-child) {
 }
 
 .acc_btn {
-  font-size: 0.95em;
   font-weight: bold;
-  color: var(--clr-basic);
   background-color: var(--clr-accent);
-  /* border: 2px solid var(--clr-basic); */
   min-width: 190px;
 }
 
 .acc_btn:hover {
-  color: var(--clr-black);
-  box-shadow: 2px 2px 0px 0px var(--clr-white), 4px 4px 0px 0px var(--clr-accent);
-  transition: 0.15s;
+  box-shadow: 3px 3px 0px 0px var(--clr-white);
+  transition: 0.3s;
 }
 
-.acc_btn:active {
+.acc2_btn {
+  color: var(--clr-white);
+  font-weight: bold;
+  background-color: var(--clr-basic);
+  min-width: 190px;
+}
+
+.acc2_btn:hover {
+  box-shadow: 3px 3px 0px 0px var(--clr-accent);
+  transition: 0.3s;
 }
 
 
@@ -204,6 +209,7 @@ main>section:not(:first-child) {
 .grid-block {
   display: grid;
   grid-template-columns: repeat(12, minmax(min-content, 1fr));
+  grid-gap: 20px;
 }
 
 .section-title {
@@ -414,7 +420,11 @@ main>section:not(:first-child) {
 
 .doc-prev {
   display: flex;
+}
 
+.doc-prev > a {
+  display: block;
+  margin: 0 10px;
 }
 
 .doc-prev img {
@@ -451,9 +461,9 @@ main>section:not(:first-child) {
   margin: 10px 0px;
 }
 
-.tab:first-of-type {
+/* .tab:first-of-type {
   border: 2px solid var(--clr-accent);
-}
+} */
 
 .tab-label {
   display: flex;
@@ -711,6 +721,10 @@ input:checked~.tab-content {
   padding: 0.5em;
 }
 
+.request_btn {
+  color: var(--clr-white);
+}
+
 
 /* ================================================
 Блок с документами
@@ -718,6 +732,7 @@ input:checked~.tab-content {
 .doc-content {
   grid-column: 2 / 12;
 }
+
 
 
 /* ================================================
