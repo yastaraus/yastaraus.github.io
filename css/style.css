@@ -108,7 +108,7 @@ body {
 .projects-list > li > a {
   display: block;
   background-color: #fff;
-  border: 1px solid #f0f0f0;
+  border: 2px solid #f0f0f0;
   border-radius: 5px;
   text-decoration: none;
   color: inherit;
@@ -118,7 +118,7 @@ body {
   margin-top: 1.8em;
 }
 .projects-list a:hover {
-  border: 1px solid #ABCDEF;
+  border: 2px solid #ABCDEF;
   /* background: #f8fbff; */
   transition: 0.3s;
 }
@@ -129,7 +129,7 @@ body {
 
 
 .projects-list > li > a:active {
-  border: 1px solid #ABCDEF;
+  border: 2px solid #ABCDEF;
   transition: 0.3s;
 }
 .project-cart {
@@ -144,6 +144,9 @@ body {
   margin-top: 0.6em;
 }
 
+.project-cart > img {
+  margin: 0 auto;
+}
 
 
 
