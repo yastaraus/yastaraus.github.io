@@ -29,11 +29,20 @@
       list-style: none;
       padding: 1vw;
     }
-    .palette li[style] > span {
+    .palette > ul > li:last-of-type {
+      border: 1px solid black;
+    }
+
+    .colors li > span {
       color: white;
       font-size: 1.2em;
       font-weight: 700;
       text-align: center;
+    }
+
+    .colors > li:last-of-type span, .colors > li:last-of-type a {
+      color: black;
+
     }
 
     @media only screen and (min-width: 1290px) {
@@ -45,7 +54,7 @@
 
 <main class="color-palette">
   <section class="palette">
-    <ul>
+    <ul class="colors">
       <li style="background-color: var(--clr-navy-blue);"><span>Navy Blue <br>Color</span></li>
       <li style="background-color: var(--clr-blue);"><span>Blue <br>Color</span></li>
       <li style="background-color: var(--clr-light-blue);"><span>Light Blue <br>Color</span></li>
@@ -55,6 +64,7 @@
       <li style="background-color: var(--clr-red);"><span>Red <br>Color</span></li>
       <li style="background-color: var(--clr-orange);"><span>Orange <br>Color</span></li>
       <li style="background-color: var(--clr-yellow);"><span>Yellow <br>Color</span></li>
+      <li><span>Telegram<br><a href="https://t.me/yastaraus">@yastaraus</a></span></li>
     </ul>
   </section>
 </main>
