@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Color Palette</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <style>
+    .color-palette {
+      padding: 1vw 1vw;
+    }
+    .palette > ul {
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-auto-rows: minmax(220px, 1fr);
+      grid-gap: 0.5vw;
+    }
+    .palette > ul > li {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 1vw;
+    }
+    .palette li[style] > span {
+      color: white;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    @media only screen and (min-width: 990px) {
+      .palette > ul {
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    }
+    }
+  </style>
+
+<main class="color-palette">
+  <section class="palette">
+    <ul>
+      <li style="background-color: var(--clr-navy-blue);"><span>Navy Blue <br>Color</span></li>
+      <li style="background-color: var(--clr-blue);"><span>Blue <br>Color</span></li>
+      <li style="background-color: var(--clr-light-blue);"><span>Light Blue <br>Color</span></li>
+      <li style="background-color: var(--clr-dark-purple);"><span>Dark Purple <br>Color</span></li>
+      <li style="background-color: var(--clr-pink);"><span>Pink <br>Color</span></li>
+      <li style="background-color: var(--clr-light-red);"><span>Light Red <br>Color</span></li>
+      <li style="background-color: var(--clr-red);"><span>Red <br>Color</span></li>
+      <li style="background-color: var(--clr-orange);"><span>Orange <br>Color</span></li>
+      <li style="background-color: var(--clr-yellow);"><span>Yellow <br>Color</span></li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
