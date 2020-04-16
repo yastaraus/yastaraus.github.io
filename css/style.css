@@ -95,16 +95,19 @@ body {
 }
 
 .projects {
-  max-width: 680px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 1em;
 }
+
 .projects-list {
   list-style: none;
 }
+
 .projects-list>li {
 
 }
+
 .projects-list > li > a {
   display: block;
   background-color: #fff;
