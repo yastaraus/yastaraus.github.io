@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Color Palette</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <style>
+    .color-palette {
+      padding: 1vw;
+    }
+    .palette > ul {
+      max-width: 1920px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-auto-rows: minmax(220px, 1fr);
+      grid-gap: 1vw;
+    }
+    .palette > ul > li {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 1vw;
+    }
+    .palette > ul > li:last-of-type {
+      border: 1px solid #474747;
+    }
+
+    .colors li > span {
+      color: white;
+      font-size: 1.2em;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .colors > li:last-of-type span, .colors > li:last-of-type a {
+      color: #474747;
+
+    }
+
+    @media only screen and (min-width: 1290px) {
+      .palette > ul {
+      grid-template-columns: repeat(auto-fill, minmax(3s20px, 1fr));
+    }
+    }
+  </style>
+
+<main class="color-palette">
+  <section class="palette">
+    <ul class="colors">
+      <li style="background-color: var(--clr-navy-blue);"><span>Navy Blue <br>Color</span></li>
+      <li style="background-color: var(--clr-blue);"><span>Blue <br>Color</span></li>
+      <li style="background-color: var(--clr-light-blue);"><span>Light Blue <br>Color</span></li>
+      <li style="background-color: var(--clr-dark-purple);"><span>Dark Purple <br>Color</span></li>
+      <li style="background-color: var(--clr-pink);"><span>Pink <br>Color</span></li>
+      <li style="background-color: var(--clr-light-red);"><span>Light Red <br>Color</span></li>
+      <li style="background-color: var(--clr-red);"><span>Red <br>Color</span></li>
+      <li style="background-color: var(--clr-orange);"><span>Orange <br>Color</span></li>
+      <li style="background-color: var(--clr-yellow);"><span>Yellow <br>Color</span></li>
+      <li><span>Telegram<br><a href="https://t.me/yastaraus">@yastaraus</a></span></li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

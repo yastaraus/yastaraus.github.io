@@ -1,4 +1,8 @@
 /* Указываем box sizing */
+body {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
@@ -27,6 +31,24 @@ blockquote,
 dl,
 dd {
   margin: 0;
+}
+
+:root {
+
+  /* comics color palette */
+  --clr-light-red: #DB494C; /* light red */
+  --clr-pink: #DB9B9B; /* pink */
+  --clr-dark-purple: #43314B; /* dark purple */
+  --clr-light-blue: #89A6C8; /* light blue */
+
+  /* retro stripes color palette */
+  --clr-yellow: #EEC352; /* yellow */
+  --clr-orange: #D68124; /* orange */
+  --clr-red: #BF3913; /* red */
+  --clr-blue: #25496B; /* blue */
+  --clr-navy-blue: #122545; /* navy blue */
+
+
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
