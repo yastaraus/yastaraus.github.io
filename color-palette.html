@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,58 @@
   <title>Color Palette</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
   <style>
-    .color-palette > section {
+
+  body {
+    background-color: var(--clr-white);
+  }
+    .color-palette>section {
       min-height: 100vh;
     }
 
-    .retro-palette {
+    .retro-palette {}
 
-    }
-
-    .retro-palette > ul {
+    .retro-palette>ul {
       max-width: 1920px;
       margin: 0 auto;
       padding: 1vw;
 
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      grid-auto-rows: minmax(220px, 1fr);
+      grid-auto-rows: minmax(220px, 1fr); /* fallback */
+      grid-auto-rows: calc(100vh/3 - 1.3vw);
       grid-gap: 1vw;
     }
-    .retro-palette > ul > li {
 
+    .retro-palette>ul>li {
       display: flex;
       justify-content: center;
       align-items: center;
       list-style: none;
       padding: 1vw;
     }
-    .color-list > ul > li:last-of-type {
-      border: 1px solid #474747;
+
+    .color-list>li:last-of-type {
+      /* border: 1px solid #474747; */
     }
 
-    .color-list li > span {
+    .color-list li>span {
       color: white;
       font-size: 1.2em;
       font-weight: 700;
       text-align: center;
+      /* text-shadow: 0px 0px 5px var(--clr-black); */
+    }
+
+    .color-list li>span:last-of-type {
+      text-shadow: none;
+
     }
 
 
+    /* Блок с автобусом */
     .misrach-palette {
       display: flex;
       flex-direction: column;
@@ -54,11 +67,10 @@
       align-items: center;
 
     }
-      .misrach-palette > * {
-        width: 80vh;
-      }
 
-
+    .misrach-palette>* {
+      width: 80vh;
+    }
 
     .school-bus {
       height: 500px;
@@ -68,7 +80,7 @@
       background-size: cover;
     }
 
-  .school-bus > * {
+    .school-bus>* {
       transition: 0.6s;
     }
 
@@ -76,12 +88,12 @@
       cursor: pointer;
     }
 
-    .school-bus:hover > * {
+    .school-bus:hover>* {
       opacity: 0;
       transition: 0.6s;
     }
 
-    .school-bus:hover > .bus {
+    .school-bus:hover>.bus {
       opacity: 0;
       transition-delay: 0.3s;
     }
@@ -112,54 +124,55 @@
       padding: 10px;
     }
 
-    .color-list > li:last-of-type span, .color-list > li:last-of-type a {
-      color: #474747;
+    .color-list>li:last-of-type span,
+    .color-list>li:last-of-type a {
+      color: var(--clr-black);
 
     }
 
     @media only screen and (min-width: 1290px) {
-      .color-list > ul {
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      .color-list>ul {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       }
     }
 
     @media only screen and (max-width: 1000px) {
-      .misrach-palette > * {
+      .misrach-palette>* {
         width: 90%;
       }
     }
-
   </style>
 
-<main class="color-palette">
-  <section class="retro-palette">
-    <ul class="color-list">
-      <li style="background-color: var(--clr-navy-blue);"><span>Navy Blue <br>Color</span></li>
-      <li style="background-color: var(--clr-blue);"><span>Blue <br>Color</span></li>
-      <li style="background-color: var(--clr-light-blue);"><span>Light Blue <br>Color</span></li>
-      <li style="background-color: var(--clr-dark-purple);"><span>Dark Purple <br>Color</span></li>
-      <li style="background-color: var(--clr-pink);"><span>Pink <br>Color</span></li>
-      <li style="background-color: var(--clr-light-red);"><span>Light Red <br>Color</span></li>
-      <li style="background-color: var(--clr-red);"><span>Red <br>Color</span></li>
-      <li style="background-color: var(--clr-orange);"><span>Orange <br>Color</span></li>
-      <li style="background-color: var(--clr-yellow);"><span>Yellow <br>Color</span></li>
-      <li><span>Telegram<br><a href="https://t.me/yastaraus">@yastaraus</a></span></li>
-    </ul>
-  </section>
-  <section class="misrach-palette">
-    <div class="school-bus">
-      <svg width="100%" height="500">
-        <rect class="sky" height="49%" fill="#a0cad6" y=""/>
-        <rect class="land" height="51%" fill="#ebdbcb" y="49%"/>
-        <rect class="bus" height="26%" width="46%" fill="#fac565" x="29%" y="39%"/>
-      </svg>
-      <!-- <div class="sky"></div>
+  <main class="color-palette">
+    <section class="retro-palette">
+      <ul class="color-list">
+        <li style="background-color: var(--clr-navy-blue);"><span style="text-shadow: 2px 2px 0px var(--clr-red);">Navy <br>Blue</span></li>
+        <li style="background-color: var(--clr-blue);"><span style="text-shadow: 2px 2px 0px var(--clr-light-red);"><br>Blue</span></li>
+        <li style="background-color: var(--clr-light-blue);"><span style="text-shadow: 2px 2px 0px var(--clr-pink);">Foggy <br>Sky</span></li>
+        <li style="background-color: var(--clr-dark-purple);"><span style="text-shadow: 2px 2px 0px var(--clr-orange);">Dark Purple <br>Color</span></li>
+        <li style="background-color: var(--clr-pink);"><span style="text-shadow: 2px 2px 0px var(--clr-light-blue);">Peachy <br>Pink</span></li>
+        <li style="background-color: var(--clr-light-red);"><span style="text-shadow: 2px 2px 0px var(--clr-blue);">Light Red <br>Color</span></li>
+        <li style="background-color: var(--clr-red);"><span style="text-shadow: 2px 2px 0px var(--clr-navy-blue);">Carpet <br>Red</span></li>
+        <li style="background-color: var(--clr-orange);"><span style="text-shadow: 2px 2px 0px var(--clr-dark-purple);">Vomit <br>Orange</span></li>
+        <li style="background-color: var(--clr-yellow);"><span style="text-shadow: 2px 2px 0px var(--clr-black);">Satisfying <br>Yellow</span></li>
+        <li style="background-color: var(--clr-white)"><span>Telegram<br><a href="https://t.me/yastaraus">@yastaraus</a></span></li>
+      </ul>
+    </section>
+    <section class="misrach-palette">
+      <div class="school-bus">
+        <svg width="100%" height="500">
+          <rect class="sky" height="49%" fill="#a0cad6" y="" />
+          <rect class="land" height="51%" fill="#ebdbcb" y="49%" />
+          <rect class="bus" height="26%" width="46%" fill="#fac565" x="29%" y="39%" />
+        </svg>
+        <!-- <div class="sky"></div>
       <div class="bus"></div>
       <div class="land"></div> -->
 
-    </div>
-    <span class="pic-sub">"Personnel Carrier Painted to Simulate School Bus", 1986, Richard Misrach</span>
-  </section>
-</main>
+      </div>
+      <span class="pic-sub">"Personnel Carrier Painted to Simulate School Bus", 1986, Richard Misrach</span>
+    </section>
+  </main>
 </body>
+
 </html>
