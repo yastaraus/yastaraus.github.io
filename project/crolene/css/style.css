@@ -1,0 +1,286 @@
+/* https://medium.com/@stasonmars/%D1%81%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B8%CC%86-%D1%81%D0%B1%D1%80%D0%BE%D1%81-css-f5816963c82b */
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===================================== */
+
+body {
+  /* background-color: rgba(26, 26, 26, 1); */
+  /* background: var(--clr-navy-blue); */
+
+}
+
+:root {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+
+h1,h3.card-title {
+  text-transform: uppercase;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column;
+}
+
+
+/* ================================================
+Блок с Шапкой
+================================================ */
+.hero {
+  height: 90vh;
+  color: var(--clr-white);
+  background-color: rgba(0, 0, 0, 0.25);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list > li > a, .hero-contacts a  {
+  display: block;
+  padding: 1.5em 2em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-list > li > a:hover, .hero-contacts a:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: .3s;
+}
+
+.hero-contacts  {
+
+}
+
+.hero-video {
+  filter: blur(3px);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:
+  translate(-50%, -50%)
+  scale(1);
+}
+
+.hero-logo .title{
+  /* text-shadow: 4px 4px 0px var(--clr-navy-blue); */
+  font-size: 4rem;
+}
+
+.hero-logo .subtitle {
+  font-size: 1.5rem;
+}
+
+main > s {
+
+}
+
+
+
+
+.card {
+  /* background-color: rgba(252, 252, 252, 1);
+  margin: 2rem auto;
+  padding: 2rem; */
+  /* border: 1px solid rgba(26, 26, 26, 1); */
+  /* border-radius: 12px; */
+}
+
+.welcome {
+  position: relative;
+}
+
+.welcome > .text-container {
+
+}
+
+.text-container > p {
+  margin: 1rem 0;
+  font-size: 1.05rem;
+}
+
+.fish {
+
+}
+
+/* ================================================
+Блок с ценами
+================================================ */
+.schedule {
+  background-color: var(--clr-white);
+  grid-gap: 20px;
+}
+
+.schedule-table {
+  /* display: block; */
+  grid-column: 2 / 9;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 2em;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.schedule-table caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: .5em 0 .75em;
+  text-align: left;
+}
+
+.schedule-table thead {
+  background-color: var(--clr-gray);
+}
+
+.schedule-table tr {
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+.schedule-table tr:hover {
+  background-color: var(--clr-gray);
+  font-weight: bold;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 1em;
+  text-align: center;
+}
+
+.schedule-table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.schedule-info {
+  grid-column: 9 / 12;
+  align-self: flex-end;
+}
+
+.info-block {
+  background-color: var(--clr-gray);
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--clr-basic);
+}
+
+.info-block>i {
+  color: var(--clr-basic);
+  font-size: 2.2em;
+}
+
+.schedule-info>.info-block {
+  padding: 0.8em 0.8em 0.8em 1.5em ;
+}
+
+.schedule-info>.info-block>i {
+  margin-right: 0.8em;
+}

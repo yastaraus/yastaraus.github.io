@@ -1,0 +1,89 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px){
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px){
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px){
+  .adaptive-table {
+    border: 0;
+  }
+
+  .adaptive-table caption {
+    font-size: 1.3em;
+  }
+
+  .adaptive-table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .adaptive-table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  .adaptive-table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    text-align: right;
+  }
+
+  .adaptive-table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .adaptive-table td:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px){
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px){
+
+}
+
+/* @media (max-aspect-ratio: 16/9) {
+    .hero-video {
+        width:auto;
+        height:100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-video {
+        display: none;
+    }
+    .hero {
+        background: url('./assets/hero-video_poster.png');
+        background-size: cover;
+    }
+} */
