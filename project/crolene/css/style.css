@@ -87,20 +87,24 @@ body {
 }
 
 :root {
-  font-size: 16px;
+  font-size: 17px;
   font-family: sans-serif;
 }
 
 
-h1,h3.card-title {
+h1.title,h3.card-title {
   text-transform: uppercase;
 }
-
-
-.container {
+.narrow-block {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1em;
+}
+.wide-block{
+  max-width: 100%;
+}
+.card {
+  padding: 2em;
+
 }
 
 .flex {
@@ -177,11 +181,9 @@ h1,h3.card-title {
   font-size: 1.5rem;
 }
 
-main > s {
+main > section {
 
 }
-
-
 
 
 .card {
@@ -196,11 +198,11 @@ main > s {
   position: relative;
 }
 
-.welcome > .text-container {
+.welcome > .text-block {
 
 }
 
-.text-container > p {
+.text-block > p {
   margin: 1rem 0;
   font-size: 1.05rem;
 }
@@ -212,12 +214,11 @@ main > s {
 /* ================================================
 Блок с ценами
 ================================================ */
-.schedule {
+.adaptive {
   background-color: var(--clr-white);
   grid-gap: 20px;
 }
-
-.schedule-table {
+.adaptive-table {
   /* display: block; */
   grid-column: 2 / 9;
   border-collapse: collapse;
@@ -226,61 +227,50 @@ main > s {
   width: 100%;
   table-layout: fixed;
 }
-
-.schedule-table caption {
+.adaptive-table caption {
   font-size: 1.5em;
   font-weight: bold;
   margin: .5em 0 .75em;
   text-align: left;
 }
-
-.schedule-table thead {
+.adaptive-table thead {
   background-color: var(--clr-gray);
 }
-
-.schedule-table tr {
+.adaptive-table tr {
   border: 1px solid #ddd;
   padding: .35em;
 }
-
-.schedule-table tr:hover {
+.adaptive-table tr:hover {
   background-color: var(--clr-gray);
   font-weight: bold;
 }
-
-.schedule-table th,
-.schedule-table td {
+.adaptive-table th,
+.adaptive-table td {
   padding: 1em;
   text-align: center;
 }
-
-.schedule-table th {
+.adaptive-table th {
   font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-
-.schedule-info {
+.adaptive-info {
   grid-column: 9 / 12;
   align-self: flex-end;
 }
-
 .info-block {
   background-color: var(--clr-gray);
   display: flex;
   align-items: center;
   border: 1px solid var(--clr-basic);
 }
-
 .info-block>i {
   color: var(--clr-basic);
   font-size: 2.2em;
 }
-
-.schedule-info>.info-block {
+.adaptive-info>.info-block {
   padding: 0.8em 0.8em 0.8em 1.5em ;
 }
-
-.schedule-info>.info-block>i {
+.adaptive-info>.info-block>i {
   margin-right: 0.8em;
 }
