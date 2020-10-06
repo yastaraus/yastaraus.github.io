@@ -1,80 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Primary Meta Tags -->
-    <title>yastaraus</title>
-    <meta name="title" content="yastaraus - плохо и ни о чём">
-    <meta name="description" content="Нет, ну не у каждого сайта есть смысл.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yastaraus.github.io">
-    <meta property="og:title" content="yastaraus - плохо и ни о чём">
-    <meta property="og:description" content="Нет, ну не у каждого сайта есть смысл.">
-    <meta property="og:image" content="./meta-img.jpg ">
+  <!-- Primary Meta Tags -->
+  <title>yastaraus</title>
+  <meta name="title" content="yastaraus">
+  <meta name="description" content="ой ну впиши туда че нить, кто это читает вообще">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yastaraus.github.io">
-    <meta property="twitter:title" content="yastaraus - плохо и ни о чём">
-    <meta property="twitter:description" content="Нет, ну не у каждого сайта есть смысл.">
-    <meta property="twitter:image" content="./meta-img.jpg ">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yastaraus.github.io">
+  <meta property="og:title" content="yastaraus">
+  <meta property="og:description" content="ой ну впиши туда че нить, кто это читает вообще">
+  <meta property="og:image" content="./meta-img.jpg ">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="./js/jquery.fittext.js"></script>
-    <script>
-      jQuery("#responsive_headline").fitText();
-    </script> -->
-    <style>
-      body {
-        min-height: 100vh;
-        scroll-behavior: smooth;
-        text-rendering: optimizeSpeed;
-        min-width: 320px;
-        font-family: 'Roboto', sans-serif;
-      }
-      *,
-      *::before,
-      *::after {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-      }
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yastaraus.github.io">
+  <meta property="twitter:title" content="yastaraus">
+  <meta property="twitter:description" content="ой ну впиши туда че нить, кто это читает вообще">
+  <meta property="twitter:image" content="./meta-img.jpg ">
 
-      main {
-        width: 50%;
-        margin: 0 auto;
-      }
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
 
-      .main-list {
-        margin: 0;
-        padding: 0;
-      }
-
-      .main-list > li {
-        list-style: none;
-
-      }
-      .main-list > li a {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-      }
+<body>
+  <main>
+    <section class="hero">
+      <span class="hello">Привет</span>
+      <span class="imtrying">Я стараюсь</span>
+      <div class="content"></div>
+    </section>
+    <!-- <section class="hero">
+      <div>
 
 
-    </style>
-  </head>
-  <body>
-     <main>
-        <ul class="main-list">
-          <li><a href="#"><article class="main-block">Nikomat - лучшая SLR камера</article></a></li>
-          <li><a href="#"><article>Лучший стикер-пак для телеграм на дикой пустоше</article></a></li>
-          <li><a href="#"><article>Написать мне</article></a></li>
-        </ul>
-     </main>
-  </body>
+      </div>
+
+
+
+
+    </section>
+
+    <section class="projects">
+      <h2>Вот что я делаю со своей жизнью:</h2>
+      <ul class="projects-list">
+        <li>
+          <a href="https://t.me/addstickers/awesomemanpack" target="_blank">
+            <article class="project-cart">
+              <img src="./assets/img/AM-Classic.png" alt="Awesome Men">
+              <h3 class="project-title">Лучшие стикеры</h3>
+              <p class="project-subtitle">Долго ли коротко, но лучший пак был сделан. И сделан мною</p>
+            </article>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://zinovievpavel.github.io/nikomat.html" target="_blank">
+            <article class="project-cart">
+              <img src="./assets/img/nikomat-meta.png" alt="nikomat">
+              <h3 class="project-title">Текст «Лучшая SLR камера»</h3>
+              <p class="project-subtitle">На основе известного мема</p>
+            </article>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://t.me/theonewithchandler" target="_blank">
+            <article class="project-cart">
+              <img src="./assets/img/chandler.jpeg" alt="Chandler">
+              <h3 class="project-title">Канал «The One with Chandler»</h3>
+              <p class="project-subtitle">Hi, I’m Chandler, I make jokes when I’m uncomfortable</p>
+            </article>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://music.apple.com/ru/playlist/retro-stripes/pl.u-e98lkVjsZmgy0X" target="_blank">
+            <article class="project-cart">
+              <img src="./assets/img/retro-stripes-poster.jpg" alt="Music playlist Retro Stripes poster">
+              <h3 class="project-title">Плейлист «Retro // Stripes»</h3>
+              <p class="project-subtitle">Крошечный плейлист музыки 50х-70х годов</p>
+            </article>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://t.me/thegiffelier" target="_blank">
+            <article class="project-cart">
+              <img src="./assets/img/giffelier.jpeg" alt="nikomat">
+              <h3 class="project-title">Подкаст «Гиффельé»</h3>
+              <p class="project-subtitle">Беру какую-нибудь известную гифку и с определенной долей иронии разбираю ее по кадрам</p>
+            </article>
+          </a>
+        </li>
+
+      </ul>
+      <p>Если тебе скучно, можешь мне написать - <a href="https://t.me/yastaraus">t.me/yastaraus</a>. Не факт, что я буду рад или даже отвечу, но попытка не пытка.</p>
+    </section>
+  </main> -->
+</body>
+
 </html>
