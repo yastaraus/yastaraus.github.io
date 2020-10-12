@@ -24,10 +24,10 @@
 
       <nav class="hero-nav">
         <ul class="nav-list">
-          <li><a href="">О нас</a></li>
-          <li><a href="">Рыба</a></li>
-          <li><a href="">Цены</a></li>
-          <li><a href="">Контакты</a></li>
+          <li><a href="#welcome">О нас</a></li>
+          <li><a href="#fish">Рыба</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#contacts">Контакты</a></li>
           <li><a href="">Как проехать</a></li>
         </ul>
       </nav>
@@ -38,39 +38,58 @@
 
     </header>
 
-      <video class="hero-video" poster="./assets/hero-video_poster.png" autoplay muted loop>
-        <source src="./assets/hero-video.mp4" type="video/mp4">
-      </video>
+    <video class="hero-video" poster="./assets/hero-video_poster.png" autoplay muted loop>
+      <!-- <source src="./assets/hero-video.mp4" type="video/mp4"> -->
+    </video>
 
   </section>
 
   <main class="">
-      <section class="card welcome narrow-block">
+    <section class="welcome" id="welcome">
+      <div class="container">
         <h3 class="card-title">Что такое Федóров пруд?</h3>
         <div class="text-block">
-          <p>Это 40 гектаров чистейшего водоема, недалеко от города Дмитров. Много рыбы и уникальная природа. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore magnam quam aliquid asperiores? Impedit vitae ad quos nulla, placeat nam quas delectus fugiat, illo cum aliquam nostrum vel inventore.</p>
+          <p>Это 40 гектаров чистейшего водоема, недалеко от города Дмитров. Много рыбы и уникальная природа. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore magnam quam aliquid asperiores? Impedit vitae ad quos nulla, placeat
+            nam quas delectus fugiat, illo cum aliquam nostrum vel inventore.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="card goods narrow-block">
+    <section class="fish" id="fish">
+      <div class="container">
         <h3 class="card-title">Наша рыба</h3>
-        <div class="item-list">
-          <article class="item">
-            <figure>
-              <img src="" alt="">
-              <figcaption></figcaption>
-            </figure>
-            <h4>Форель</h4>
-            <span>От 0,5 до 5кг</span>
-          </article>
-          <article class="item">
-            <h4>Карп</h4>
-            <span>От 0,5 до 5кг</span>
-          </article>
-        </div>
-      </section>
+        <div class="fish-list">
 
-      <section class="card price narrow-block">
+          <article class="fish-item">
+            <figure>
+              <img src="https://picsum.photos/600/600?random=1" alt="Форель">
+            </figure>
+            <div class="fish-desc">
+              <h4 class="fish-title">Форель1</h4>
+              <span class="fish-subtitle">От 0,5 до 5кг</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius accusamus, veritatis ad nesciunt harum temporibus distinctio consequatur eveniet ex rem voluptatibus praesentium atque unde officia provident eum inventore. Laudantium sapiente in mollitia recusandae quo dolor unde quos architecto alias molestias.</p>
+              <span class="price-badge">300 р/кг</span>
+            </div>
+          </article>
+
+          <article class="fish-item">
+            <figure>
+              <img src="https://picsum.photos/600/600?random=2" alt="Форель">
+            </figure>
+            <div class="fish-desc">
+              <h4 class="fish-title">Карп2</h4>
+              <span class="fish-subtitle">От 0,5 до 5кг</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius accusamus, veritatis ad nesciunt harum temporibus distinctio consequatur eveniet ex rem voluptatibus praesentium atque unde officia provident eum inventore. Laudantium sapiente in mollitia recusandae quo dolor unde quos architecto alias molestias.</p>
+              <span class="price-badge">300 р/кг</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="prices" id="prices">
+      <div class="container">
         <h3 class="card-title">Стоимость рыбы</h3>
         <div>
           <table class="adaptive-table">
@@ -97,20 +116,43 @@
           </table>
           <p>Без ограничений</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="card gallery narrow-block">
-        <h3 class="card-title">Галерея</h3>
-      </section>
+    <!-- <section class="card gallery narrow-block">
+      <h3 class="card-title">Галерея</h3>
+    </section> -->
 
-      <section class="card map narrow-block">
+    <section class="contacts" id="contacts">
+      <div class="container">
         <h3 class="card-title">Куда ехать</h3>
-      </section>
+      </div>
+      <div class="contacts-inner">
+        <div class="info">
+          <div class="lala">
+            <ul>
+              <li>Россия, Новгородская обл., село Дмитров</li>
+              <li>Телефон: <span>+79099090909</span></li>
+              <li>E-mail: <span>sdfsdj@sdald.ru</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="map">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A879007a885d050475aa5bc0e84b8ba0e2cd44a90e255d36c30ad74d089a5d2b5&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+      </div>
+    </section>
 
-      <section class="card contacts narrow-block">
-        <h3 class="card-title">Связаться</h3>
-      </section>
+    <section class="">
+      <h3 class="card-title">Связаться</h3>
+    </section>
   </main>
+
+  <button class="up-button" type="button">
+    ↑
+    <span class="visually-hidden">Наверх</span>
+  </button>
+  <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>
