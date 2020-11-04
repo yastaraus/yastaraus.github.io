@@ -79,10 +79,6 @@ select {
 }
 
 /* ===================================== */
-
-
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -95,6 +91,11 @@ body {
   font-size: 17px;
   font-family: sans-serif;
   --cnt-wdt: 1100px; /* ширина контейнера */
+}
+
+.visually-hidden {
+  visibility: hidden;
+  box-suppress: hide;
 }
 
 h1.title,h3.card-title {
@@ -121,16 +122,19 @@ h1.title,h3.card-title {
   position: fixed;
   z-index: 1;
   padding: 0;
-  bottom: 75px;
-  right: 20px;
+  bottom: 60px;
+  right: 40px;
   width: 64px;
   height: 64px;
+
   font-size: 36px;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
-  border: 5px solid;
-  border-radius: 50%;
+
+  border: 2px solid;
+  /* border-radius: %; */
+
   display: none;
   cursor: pointer;
 }
@@ -244,7 +248,6 @@ Fishes
   max-width: 60%;
 
   position: relative;
-
 }
 
 .fish-title {
