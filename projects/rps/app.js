@@ -3,15 +3,14 @@
 2. Добавить правила игры - по приколу
 */
 
-// Можно написать перебор всех существующих вариантов выбора пользователя, добавлять их в массив, и возвращать как-то данные оттуда.
 // Потом можно сделать разные типы игр - классика и от шелдона. Как сделать так что бы в зависимости от выбора типа игры в массив набивалось разное кол-во значений?
 
 // Начальный экран с кнопкой "Начать"
 // После нажатия кнопки "Начать" сразу считается таймер, за время которого ты должен выбрать кнопку. Если не успеваешь то за тебя выбирает рандомайзер, на экране нужно что-то показать, типа "Панический выбор", что бы пользователь понял откуда это значение. Если успеваешь твой выбор сравнивается с компом. Если выйграл показывается "Ты выйграл", если нет то "Ты проиграл". 
 
-const rock = document.getElementById("rock");
-const paper = document.getElementById("paper");
-const scissors = document.getElementById("scissors");
+// const rock = document.getElementById("rock");
+// const paper = document.getElementById("paper");
+// const scissors = document.getElementById("scissors");
 
 let userScore = 0;
 let computerScore = 0;
@@ -39,17 +38,17 @@ function getComputerChoice() {
 }
 
 function win() {
-    gameResultElem.innerHTML = "You WIN"
+    gameResultElem.innerHTML = "You Win"
     userScore++;
     userScoreElem.innerHTML = userScore;
 };
 function lose() {
-    gameResultElem.innerHTML = "You LOST"
+    gameResultElem.innerHTML = "You Lost"
     computerScore++;
     computerScoreElem.innerHTML = computerScore;
 };
 function draw() {
-    gameResultElem.innerHTML = "It's a DRAW"
+    gameResultElem.innerHTML = "It's a Draw"
 };
 
 // Игра
