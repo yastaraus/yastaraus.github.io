@@ -13,84 +13,66 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
+let userScore = 0;
+let computerScore = 0;
+let userScoreElem = document.querySelector('.player_score');
+let computerScoreElem = document.querySelector('.computer_score');
+let gameResultElem = document.querySelector('.game_result');
+
 let userChoice;
-let allChoices = [];
 
 // Получаем все элементы с data-choice
 let allChoicesElements = document.querySelectorAll('[data-choice]');
 
-// console.log(typeof(allChoicesElements));
-
-// Перебираем все элементы и добавляем значение data-choice в массив
+// Перебираем, слушаем все элементы с data-choice, шлем в функцию game()
 for (let i = 0; i < allChoicesElements.length; i++) {
-    allChoices.push(allChoicesElements[i].dataset.choice);
+    allChoicesElements[i].addEventListener('click', function() {
+        userChoice = allChoicesElements[i].dataset.choice;
+        game(userChoice);
+    })
 }
 
-// console.log(allChoices);
-
-// Получаем выбор игрока
-// console.log(typeof(allChoicesElements[1]));
-// console.log(typeof(allChoices[1]));
-
-function getUserChoice() {
-
-    // rock.addEventListener('click', function() {
-    //     userChoice = rock.dataset.choice;
-    //     console.log(userChoice);
-    // })
-    // paper.addEventListener('click', function() {
-    //     userChoice = paper.dataset.choice;
-    //     console.log(userChoice);
-    // })
-    // scissors.addEventListener('click', function() {
-    //     userChoice = scissors.dataset.choice;
-    //     console.log(userChoice);
-    // })
-
-
-    // не работает потому что allChoices[i] это string
-    for (let i = 0; i < allChoicesElements.length; i++) {
-        allChoicesElements[i].addEventListener('click', function() {
-            userChoice = allChoicesElements[i].dataset.choice;
-            console.log(userChoice);
-        })
-    }
-
-    // for (i of allChoices) {
-    //     i.addEventListener('click', function() {
-    //         userChoice = i.dataset.choice;
-    //         console.log(userChoice);
-    //     })
-    // }
-
-    return userChoice;
-}
-getUserChoice()
-
-// Получаем выбор компьютера
+// Получаем выбор компьютера (рандомный)
 function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * allChoicesElements.length);
     return allChoicesElements[randomChoice].dataset.choice;
 }
 
+function win() {
+    gameResultElem.innerHTML = "You WIN"
+    userScore++;
+    userScoreElem.innerHTML = userScore;
+};
+function lose() {
+    gameResultElem.innerHTML = "You LOST"
+    computerScore++;
+    computerScoreElem.innerHTML = computerScore;
+};
+function draw() {
+    gameResultElem.innerHTML = "It's a DRAW"
+};
 
-// Правила игры
-function game(player, computer) {
-    switch(player + " " + computer) {
+// Игра
+function game(user) {
+
+    let computer = getComputerChoice();
+
+    // Правила игры
+    switch(user + " " + computer) {
         case "rock scissors":
         case "scissors paper":
         case "paper rock":
-            console.log("WIN")
+            win();
             break;
         case "scissors rock":
         case "paper scissors":
         case "rock paper":
-            console.log("LOSE")
+            lose();
             break;
         case "scissors scissors":
         case "paper paper":
         case "rock rock":
-            console.log("DRAW")
+            draw();
             break;
     }
 }
