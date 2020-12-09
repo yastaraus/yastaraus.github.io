@@ -12,7 +12,7 @@ body {
 
 .main {
     min-height: 100vh;
-    background-color: rgb(255, 233, 233);
+    background-color: rgb(245, 245, 245);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,9 +32,9 @@ body {
 .rps-game {
     min-width: 300px;
     min-height: 400px;
-    border: 1px solid rgb(115, 153, 187);;
+    border: 1px solid rgb(20, 20, 20);
     box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.192);
-    background-color: rgb(219, 238, 255);
+    background-color: rgb(255, 109, 109);
     padding: 0 .8rem;
     display: flex;
     flex-direction: column;
@@ -59,18 +59,18 @@ body {
     box-shadow: inset 0px 0px 4px 2px rgba(0, 0, 0, 0.137);
 }
 
-.choice {
+.choice-list {
     display: flex;
     justify-content: space-around;
 }
 
-.choice li {
+.choice-list li {
     /* display: block; */
     list-style: none;
 
 }
 
-.choice li button {
+.choice-list li button {
     padding: .2rem .5rem;
     min-width: 80px;
     font-size: 1rem;
@@ -93,11 +93,11 @@ body {
         height: 60%;
     }
 
-    .choice li {
-        /* flex-grow: 2; */
-    }
+    /* .choice li {
+        flex-grow: 2;
+    } */
 
-    .choice li button {
+    .choice-list li button {
         font-size: 1.1rem;
     }
 }
