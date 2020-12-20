@@ -62,7 +62,7 @@ body {
     display: block;
 }
 
-.player_score, .computer_score {
+.user_score, .computer_score {
     font-weight: bold;
 }
 
