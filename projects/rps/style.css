@@ -19,7 +19,7 @@ body {
 
 .main {
     min-height: 100vh;
-    background-color: rgb(245, 245, 245);
+    background-color: var(--clr-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,9 +36,9 @@ body {
     color: var(--clr-prime);
 }
 
-.rps-game {
-    min-width: 300px;
-    min-height: 400px;
+.game-content {
+    min-width: 600px;
+    min-height: 600px;
     /* border: 1px solid var(--clr-black); */
     box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.192);
     /* background-color: var(--clr-prime); */
@@ -109,7 +109,7 @@ body {
         justify-content: center;
         
     }
-    .rps-game {
+    .game-content {
         min-width: 100%;
         height: 60%;
     }

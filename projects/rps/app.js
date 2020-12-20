@@ -1,6 +1,8 @@
 let userScoreElem = document.querySelector('.user_score');
 let computerScoreElem = document.querySelector('.computer_score');
 let gameResultElem = document.querySelector('.game_result');
+let userResultElem = document.querySelector('.user-choice-img');
+let computerResultElem = document.querySelector('.computer-choice-img');
 let userScore = 0;
 let computerScore = 0;
 let userChoice;
@@ -66,6 +68,8 @@ function game(user) {
             draw();
             break;
     }
+    userResultElem.innerHTML = user;
+    computerResultElem.innerHTML = computer;
 };
 
 // Пишем в local storage
@@ -79,7 +83,7 @@ function readLocalScoreData() {
 
     if (localStorage.getItem('user_score') === null) {
         localStorage.setItem('user_score', 0);
-    }
+    } 
     if (localStorage.getItem('computer_score') === null) {
         localStorage.setItem('computer_score', 0);
     }
