@@ -1,56 +1,55 @@
-let userScoreElem = document.querySelector('.user_score');
-let computerScoreElem = document.querySelector('.computer_score');
-let gameResultElem = document.querySelector('.game_result');
-let userResultElem = document.querySelector('.user-choice-img');
-let computerResultElem = document.querySelector('.computer-choice-img');
 let userScore = 0;
 let computerScore = 0;
 let userChoice;
+const userScoreElem = document.querySelector('.user_score');
+const computerScoreElem = document.querySelector('.computer_score');
+const gameResultElem = document.querySelector('.game_result');
+const userResultElem = document.querySelector('.user-choice-img');
+const computerResultElem = document.querySelector('.computer-choice-img');
+const allChoicesElem = document.querySelectorAll('[data-choice]');
+const clearLocalResultsElem = document.getElementById('clear_data');
 
-readLocalScoreData();
-
-// Получаем все элементы с data-choice
-let allChoicesElements = document.querySelectorAll('[data-choice]');
+readLocalData();
 
 // Перебираем, слушаем все элементы с data-choice, шлем в функцию game()
-for (let i = 0; i < allChoicesElements.length; i++) {
-    allChoicesElements[i].addEventListener('click', function() {
-        userChoice = allChoicesElements[i].dataset.choice;
+for (let i = 0; i < allChoicesElem.length; i++) {
+    allChoicesElem[i].addEventListener('click', function() {
+        userChoice = allChoicesElem[i].dataset.choice;
         game(userChoice);
     })
 };
 
 // Получаем выбор компьютера (рандомный)
 function getComputerChoice() {
-    let randomChoice = Math.floor(Math.random() * allChoicesElements.length);
-    return allChoicesElements[randomChoice].dataset.choice;
+    let randomChoice = Math.floor(Math.random() * allChoicesElem.length);
+    return allChoicesElem[randomChoice].dataset.choice;
 };
 
-// При победе
+// Победа
 function win() {
-    gameResultElem.innerHTML = "You Win";
+    showCompareResults()
+    gameResultElem.textContent = "You Win";
     userScore++;
-    userScoreElem.innerHTML = userScore;
-    writeLocalScoreData(userScore, computerScore);
+    updateScores();
+    writeLocalData(userScore, computerScore);
 };
-
-// При поражении
+// Поражение
 function lose() {
-    gameResultElem.innerHTML = "You Lost";
+    showCompareResults()
+    gameResultElem.textContent = "You Lost";
     computerScore++;
-    computerScoreElem.innerHTML = computerScore;
-    writeLocalScoreData(userScore, computerScore);
+    updateScores();
+    writeLocalData(userScore, computerScore);
 };
-
-// При ничье
+// Ничья
 function draw() {
-    gameResultElem.innerHTML = "It's a Draw";
+    showCompareResults() 
+    gameResultElem.textContent = "It's a Draw";
 };
 
 // Игра
 function game(user) {
     let computer = getComputerChoice();
-    // Правила игры
     switch(user + " " + computer) {
         case "rock scissors":
         case "scissors paper":
@@ -68,28 +67,55 @@ function game(user) {
             draw();
             break;
     }
-    userResultElem.innerHTML = user;
-    computerResultElem.innerHTML = computer;
+    userResultElem.textContent = user;
+    computerResultElem.textContent = computer;
 };
 
 // Пишем в local storage
-function writeLocalScoreData(localUserScore, localComputerScore) {
+function writeLocalData(localUserScore, localComputerScore) {
     localStorage.setItem('user_score', localUserScore);
     localStorage.setItem('computer_score', localComputerScore);
 };
 
 // Читаем из local storage
-function readLocalScoreData() {
-
+function readLocalData() {
     if (localStorage.getItem('user_score') === null) {
         localStorage.setItem('user_score', 0);
     } 
     if (localStorage.getItem('computer_score') === null) {
         localStorage.setItem('computer_score', 0);
     }
-
     userScore = localStorage.getItem('user_score');
     computerScore = localStorage.getItem('computer_score');
-    userScoreElem.innerHTML = localStorage.getItem('user_score');
-    computerScoreElem.innerHTML = localStorage.getItem('computer_score');
+    userScoreElem.textContent = localStorage.getItem('user_score');
+    computerScoreElem.textContent = localStorage.getItem('computer_score');
 };
+
+// Чистим экран и результаты игры
+function toClearLocalResults() {
+    hideCompareResults();
+    userScore = 0;
+    computerScore = 0;
+    writeLocalData(userScore, computerScore);
+    updateScores();
+};
+clearLocalResultsElem.onclick = toClearLocalResults;
+
+// Показать результаты
+function showCompareResults() {
+    gameResultElem.classList.remove('visibility-hidden');
+    userResultElem.classList.remove('visibility-hidden');
+    computerResultElem.classList.remove('visibility-hidden');
+};
+// Скрыть результаты
+function hideCompareResults() {
+    gameResultElem.classList.add('visibility-hidden'); 
+    userResultElem.classList.add('visibility-hidden');
+    computerResultElem.classList.add('visibility-hidden');
+};
+
+// Обновляем результаты
+function updateScores() {
+    userScoreElem.textContent = userScore;
+    computerScoreElem.textContent = computerScore;
+}

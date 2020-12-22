@@ -21,6 +21,9 @@ body {
     background-color: rgb(83, 83, 83);
 }
 
+ul[class] li {
+    list-style: none;
+}
 
 .main {
     min-height: 100vh;
@@ -74,8 +77,8 @@ body {
     display: flex;
 }
 
-.computer-side {
-
+.computer-info {
+    text-align: right;
 }
 .user-side {
     border-top: 2px dashed green;
@@ -100,7 +103,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--clr-black);
-    padding: 0px 0.5rem;
+    padding: 1rem;
+    border: 2px dashed green;
+}
+
+.visibility-hidden {
+    visibility: hidden;
 }
 
 
@@ -115,13 +123,24 @@ body {
     margin: 0px 15px;
 }
 
-.choice-list li button {
+.btn {
     padding: .4rem .6rem;
     min-width: 80px;
     font-size: 1rem;
     color: var(--clr-white);
     cursor: pointer;
     background-color: rgb(216, 119, 0);
+    border: 1px solid var(--clr-white);
+    border-radius: 5px;
+}
+
+.btn_alt {
+    padding: .4rem .6rem;
+    min-width: 80px;
+    font-size: 1rem;
+    color: var(--clr-black);
+    cursor: pointer;
+    background-color: rgb(206, 206, 206);
     border: 1px solid var(--clr-white);
     border-radius: 5px;
 }

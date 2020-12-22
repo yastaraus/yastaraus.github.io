@@ -18,29 +18,34 @@
                 <div class="game-field">
 
                     <div class="computer-side side">
-                        <div class="computer-choice-img choice-img"></div>
+                        <div class="computer-choice-img choice-img visibility-hidden"></div>
                         <div class="computer-info info-field">
-                            <span class="computer">Computer: <span class="computer_score">0</span></span>
+                            <span class="computer_name">Computer: <span class="computer_score"></span></span>
                         </div>
                     </div>
 
-                    <span class="game_result"></span>
+                    <div class="game_result visibility-hidden"></div>
 
                     <div class="user-side side">
-                        <div class="user-choice-img choice-img"></div>
+                        <div class="user-choice-img choice-img visibility-hidden"></div>
                         <div class="user-info info-field">
-                            <span class="user">User: <span class="user_score">0</span></span>
+                            <span class="user_name">User: <span class="user_score"></span></span>
                         </div>
                     </div>
 
                 </div>
                 <div class="pad pad-bottom">
                     <ul class="choice-list">
-                        <li><button data-choice="rock" id="rock">Rock</button></li>
-                        <li><button data-choice="paper" id="paper">Paper</button></li>
-                        <li><button data-choice="scissors" id="scissors">Scissors</button></li>
+                        <li><button class="btn" data-choice="rock" id="rock">Rock</button></li>
+                        <li><button class="btn" data-choice="paper" id="paper">Paper</button></li>
+                        <li><button class="btn" data-choice="scissors" id="scissors">Scissors</button></li>
                     </ul>
                 </div>
+            </div>
+            <div class="settings">
+                <ul class="settings-list">
+                    <li><button class="btn_alt" id="clear_data">Clear data</button></li>
+                </ul>
             </div>
         </section>
     </main>
