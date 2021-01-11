@@ -1,16 +1,16 @@
-/* My color palette v. 1.0 */
+/* My color palette v.1 */
 :root {
-  /* palette #0: basic */
+  /* basic colors */
   --clr-white: #FAFAFA;
   --clr-black: #111111;
 
-  /* palette #1: comics color  */
+  /* comics color palette */
   --clr-light-red: #DB494C; /* light red */
   --clr-pink: #DB9B9B; /* pink */
   --clr-dark-purple: #43314B; /* dark purple */
   --clr-light-blue: #89A6C8; /* light blue */
 
-  /* palette #2: retro stripes color palette */
+  /* retro stripes color palette */
   --clr-yellow: #EEC352; /* yellow */
   --clr-orange: #D68124; /* orange */
   --clr-red: #BF3913; /* red */

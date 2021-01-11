@@ -1,0 +1,31 @@
+{
+    "id": 1,
+    "name": "Olympus",
+    "model": "OM-1",
+    "type": "SLR",
+    "lensmount": "Olympus OM mount",
+    "focusing": {
+        "type": "ручной",
+        "method": "зеркало"
+    },
+    "shutter": {
+        "type": "шторный",
+        "place": "фокальный",
+        "control": "механический",
+        "minShutterSpeed": 0.001,
+        "maxShutterSpeed": 1,
+        "bulb": false,
+        "flashsync": 0.01666667
+    },
+    "manufacturer": {
+        "name": "Olympus",
+        "country": "Japan"
+    },
+    "exponometer": {
+        "buildin": true,
+        "material": ""
+    },
+    "autorelease": true,
+    "multiexposure": false,
+    "mirrorLockUp": true
+}

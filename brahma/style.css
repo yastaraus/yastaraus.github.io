@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    color: var(--clr-black);
+    font-size: 14px;
+}
+
+.form_section {
+    min-height: 100vh;
+    background-color: var(--clr-light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    display: none;
+}
+
+.camera_form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row dense;
+}
+
+.form-block {
+    margin: 0.5em;
+}
+.form-block > label{
+    display: block;
+}
+.form-block > input {
+    display: block;
+    min-width: 200px;
+    border: 1px solid var(--clr-blue);
+    border-radius: 3px;
+
+    padding: 0.2rem 0.5rem;
+}
+
+

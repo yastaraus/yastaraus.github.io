@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rewindknob</title>
+    <link rel="stylesheet" href="lightresetcss.css">
+    <link rel="stylesheet" href="mycolors.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="main">
+
+        <section class="form_section">
+            <form class="camera_form">
+
+                <div class="form-block">
+                    <label for="brand_input">Название</label>
+                    <input name="brand" id="brand_input" type="text" required>
+                </div>
+
+                <div class="form-block">
+                    <label for="model_input">Модель</label>
+                    <input name="model" id="model_input" type="text" required>
+                </div>
+
+                <div class="form-block">
+                    <label for="format_input">Формат</label>
+                    <input name="format" id="format_input" type="text" required>
+                </div>
+
+                <div class="form-block">
+                    <label for="min-shutter">Минимальная выдержка</label>
+                    <input name="min-shutter" id="min-shutter" type="number">
+                </div>
+                
+                <div class="form-block">
+                    <label for="max-shutter">Максимальная выдержка</label>
+                    <input name="max-shutter" id="max-shutter" type="number">
+                </div>
+
+                <div class="form-block">
+                    <button type="submit">Отправить</button>
+                    <button type="reset">Сбросить</button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <div class="desc_section">
+            <div class="wrapper">
+                <h3>Описание</h3>
+                <p><span id="brand_name"></span> <span id="model_name"></span> это однообъективная зеркальная камера <span id="camera_format"></span> формата, произведенная компанией Olympus Ltd. в 1983 г.</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

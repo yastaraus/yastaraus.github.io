@@ -1,6 +1,6 @@
 let userScore = 0;
 let computerScore = 0;
-let userChoice;
+
 const userScoreElem = document.querySelector('.user_score');
 const computerScoreElem = document.querySelector('.computer_score');
 const gameResultElem = document.querySelector('.game_result');
@@ -13,6 +13,7 @@ readLocalData();
 
 // Перебираем, слушаем все элементы с data-choice, шлем в функцию game()
 for (let i = 0; i < allChoicesElem.length; i++) {
+    let userChoice;
     allChoicesElem[i].addEventListener('click', function() {
         userChoice = allChoicesElem[i].dataset.choice;
         game(userChoice);
@@ -118,4 +119,8 @@ function hideCompareResults() {
 function updateScores() {
     userScoreElem.textContent = userScore;
     computerScoreElem.textContent = computerScore;
-}
+};
+
+function startGame() {
+    
+};

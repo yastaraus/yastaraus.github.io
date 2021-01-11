@@ -15,7 +15,8 @@ body {
     font-family: sans-serif;
     color: var(--clr-black);
     font-size: 18px;
-    background-image: url(img/bg1.jpg);
+    /* background-image: url(img/bg1.jpg); */
+
     background-size: 400px;
     background-repeat: repeat;
     background-color: rgb(83, 83, 83);
@@ -37,6 +38,7 @@ ul[class] li {
 }
 
 #game-container {
+    position: relative;
     grid-area: g;
 }
 
@@ -143,6 +145,10 @@ ul[class] li {
     background-color: rgb(206, 206, 206);
     border: 1px solid var(--clr-white);
     border-radius: 5px;
+}
+
+.settings {
+    position: absolute;
 }
 
 @media only screen and (max-width: 720px){
