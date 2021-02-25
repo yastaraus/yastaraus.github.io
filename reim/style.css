@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: rgb(137, 16, 194);
+}
+
+main {
+    position: relative;
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 200px 200px 1fr;
+    grid-template-rows: auto auto 200px 200px auto auto;
+}
+
+.main-header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+
+    display: flex;
+    align-items: start;
+}
+.main-menu {
+    display: flex;
+    color: white;
+}
+.main-menu a {
+    display: block;
+    padding: 1em 2em;
+    margin: 0 1em;
+    color: inherit;
+    text-decoration: none;
+}
+.main-menu a:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+.hero-text {
+    grid-column: 2/5;
+    grid-row: 3/5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin: 0 auto;
+    color: white;    
+}
+.hero-text > h1 {
+    font-size: 2.5em;
+}
+.hero-img {
+    grid-column: 6/8;
+    grid-row: 3/5;
+}
+.hero-img > img {
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.hero-triangles {
+    grid-column: 1/-1;
+    grid-row: -1/-5;
+    /* background-color: red; */
+    outline: 4px dotted red;
+    position: relative;
+    
+
+}
+
+.test {
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.svg-triangle {
+    height: 100%;
+    width: 100%;
+    /* height: 50vh; */
+    fill: wheat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    align-items: right;
+}
+
+.triangle-1 {
+    
+}

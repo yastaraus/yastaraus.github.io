@@ -10,6 +10,7 @@ const allChoicesElem = document.querySelectorAll('[data-choice]');
 const clearLocalResultsElem = document.getElementById('clear_data');
 
 readLocalData();
+// console.log(userScore + computerScore);
 
 // Перебираем, слушаем все элементы с data-choice, шлем в функцию game()
 for (let i = 0; i < allChoicesElem.length; i++) {
@@ -19,13 +20,11 @@ for (let i = 0; i < allChoicesElem.length; i++) {
         game(userChoice);
     })
 };
-
 // Получаем выбор компьютера (рандомный)
 function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * allChoicesElem.length);
     return allChoicesElem[randomChoice].dataset.choice;
 };
-
 // Победа
 function win() {
     showCompareResults()
@@ -47,7 +46,6 @@ function draw() {
     showCompareResults() 
     gameResultElem.textContent = "It's a Draw";
 };
-
 // Игра
 function game(user) {
     let computer = getComputerChoice();
@@ -114,7 +112,6 @@ function hideCompareResults() {
     userResultElem.classList.add('visibility-hidden');
     computerResultElem.classList.add('visibility-hidden');
 };
-
 // Обновляем результаты
 function updateScores() {
     userScoreElem.textContent = userScore;
@@ -124,3 +121,4 @@ function updateScores() {
 function startGame() {
     
 };
+
