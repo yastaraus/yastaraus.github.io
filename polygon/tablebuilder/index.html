@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JSON Table Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        .wrapper {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .data-table {
+            border-collapse: collapse;
+        }
+        .data-table thead {
+            background-color: lightgray;
+        }
+        .data-table,
+        .data-table thead,
+        .data-table tbody,
+        .data-table th, 
+        .data-table tr,
+        .data-table td {
+            border: 1px solid gray;
+        }
+        .data-table th,
+        .data-table td {
+            padding: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <table id="data-table" class="data-table">
+            <!-- JavaScript generated table -->
+        </table>
+    </div>  
+    <script src="app.js"></script>
+</body>
+</html>
